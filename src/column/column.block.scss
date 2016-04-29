@@ -1,0 +1,16 @@
+.Column {
+    box-sizing: border-box;
+    flex: 1;
+    margin: 0 $gutter-width;
+    margin-bottom: $gutter-width * 2;
+    flex-basis: 100%;
+
+    @media (min-width: $breakpoint-md) {
+        margin-bottom: 0;
+        flex-basis: auto;
+    }
+
+    @if $debug {
+        border: 1px solid green;
+    }
+}

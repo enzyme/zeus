@@ -1,0 +1,9 @@
+.Container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $container-width;
+
+    @if $debug {
+        border: 1px solid red;
+    }
+}

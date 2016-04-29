@@ -1,0 +1,21 @@
+.Row {
+    @at-root &--align-top {
+        align-items: flex-start !important;
+    }
+
+    @at-root &--align-center {
+        align-items: center !important;
+    }
+
+    @at-root &--align-bottom {
+        align-items: flex-end !important;
+    }
+
+    @at-root &--stretch {
+        align-items: stretch !important;
+    }
+
+    @at-root &--baseline {
+        align-items: baseline !important;
+    }
+}

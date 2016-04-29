@@ -1,0 +1,14 @@
+$debug: false !default;
+
+$container-width: 90rem !default;
+$gutter-width: 1rem !default;
+$column-count: 12 !default;
+
+$quater: (100 / 4) + 0%;
+$half: (100 / 2) + 0%;
+$third: (100 / 3) + 0%;
+
+$breakpoint-sm: 544px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

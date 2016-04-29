@@ -1,0 +1,7 @@
+.Column {
+    @for $i from 1 through $column-count {
+        @at-root &--offset-#{$i} {
+            margin-left: ($i / $column-count) * 100% !important;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.Column {
+    @at-root &--text-left {
+        text-align: left;
+    }
+
+    @at-root &--text-center {
+        text-align: center;
+    }
+
+    @at-root &--text-right {
+        text-align: right;
+    }
+
+    @at-root &--text-justify {
+        text-align: justify;
+    }
+}

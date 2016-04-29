@@ -1,0 +1,26 @@
+.Column {
+    @at-root &--half {
+        flex: none;
+        width: $half;
+    }
+
+    @at-root &--quater {
+        flex: none;
+        width: $quater;
+    }
+
+    @at-root &--three-quaters {
+        flex: none;
+        width: $quater * 3;
+    }
+
+    @at-root &--third {
+        flex: none;
+        width: $third;
+    }
+
+    @at-root &--two-thirds {
+        flex: none;
+        width: $third * 2;
+    }
+}
