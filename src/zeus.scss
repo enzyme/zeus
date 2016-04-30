@@ -1,17 +1,13 @@
+// Normalize things.
+@import '../node_modules/normalize.css/normalize';
+
+// Initial configuration.
+@import 'skeleton.scss';
+
 // Global settings.
 @import 'variables.scss';
 
-// Grid container component.
-@import 'container/container.block.scss';
-
-// Grid row component.
-@import 'row/row.block.scss';
-@import 'row/row.alignment.modifiers.scss';
-@import 'row/row.spacing.modifiers.scss';
-
-// Grid column component.
-@import 'column/column.block.scss';
-@import 'column/column.grid.size.modifiers.scss';
-@import 'column/column.offset.modifiers.scss';
-@import 'column/column.named.size.modifiers.scss';
-@import 'column/column.typography.modifiers.scss';
+// Components.
+@import 'container/index.scss';
+@import 'row/index.scss';
+@import 'column/index.scss';

@@ -1,26 +1,119 @@
 .Column {
-    @at-root &--half {
-        flex: none;
-        width: $half;
+    // These named sizes defined in this file are purely a syntactical
+    // sugar (in most cases) to specify a column size,
+    // such as a third, three-quaters etc.
+
+    $flex-quater: 0 0 $quater;
+    $flex-three-quaters: 0 0 ($quater * 3);
+    $flex-third: 0 0 $third;
+    $flex-two-thirds: 0 0 ($third * 2);
+    $flex-half: 0 0 $half;
+
+    @at-root &--quater, &--xs-quater {
+        flex: $flex-quater;
     }
 
-    @at-root &--quater {
-        flex: none;
-        width: $quater;
+    @at-root &--three-quaters, &--xs-three-quaters {
+        flex: $flex-three-quaters;
     }
 
-    @at-root &--three-quaters {
-        flex: none;
-        width: $quater * 3;
+    @at-root &--third, &--xs-third {
+        flex: $flex-third;
     }
 
-    @at-root &--third {
-        flex: none;
-        width: $third;
+    @at-root &--two-thirds, &--xs-two-thirds {
+        flex: $flex-two-thirds;
     }
 
-    @at-root &--two-thirds {
-        flex: none;
-        width: $third * 2;
+    @at-root &--half, &--xs-half {
+        flex: $flex-half;
+    }
+
+    @media (min-width: $viewport-sm) {
+        @at-root &--sm-quater {
+            flex: $flex-quater;
+        }
+
+        @at-root &--sm-three-quaters {
+            flex: $flex-three-quaters;
+        }
+
+        @at-root &--sm-third {
+            flex: $flex-third;
+        }
+
+        @at-root &--sm-two-thirds {
+            flex: $flex-two-thirds;
+        }
+
+        @at-root &--sm-half {
+            flex: $flex-half;
+        }
+    }
+
+    @media (min-width: $viewport-md) {
+        @at-root &--md-quater {
+            flex: $flex-quater;
+        }
+
+        @at-root &--md-three-quaters {
+            flex: $flex-three-quaters;
+        }
+
+        @at-root &--md-third {
+            flex: $flex-third;
+        }
+
+        @at-root &--md-two-thirds {
+            flex: $flex-two-thirds;
+        }
+
+        @at-root &--md-half {
+            flex: $flex-half;
+        }
+    }
+
+    @media (min-width: $viewport-lg) {
+        @at-root &--lg-quater {
+            flex: $flex-quater;
+        }
+
+        @at-root &--lg-three-quaters {
+            flex: $flex-three-quaters;
+        }
+
+        @at-root &--lg-third {
+            flex: $flex-third;
+        }
+
+        @at-root &--lg-two-thirds {
+            flex: $flex-two-thirds;
+        }
+
+        @at-root &--lg-half {
+            flex: $flex-half;
+        }
+    }
+
+    @media (min-width: $viewport-xl) {
+        @at-root &--xl-quater {
+            flex: $flex-quater;
+        }
+
+        @at-root &--xl-three-quaters {
+            flex: $flex-three-quaters;
+        }
+
+        @at-root &--xl-third {
+            flex: $flex-third;
+        }
+
+        @at-root &--xl-two-thirds {
+            flex: $flex-two-thirds;
+        }
+
+        @at-root &--xl-half {
+            flex: $flex-half;
+        }
     }
 }

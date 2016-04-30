@@ -3,12 +3,12 @@
         text-align: left;
     }
 
-    @at-root &--text-center {
-        text-align: center;
-    }
-
     @at-root &--text-right {
         text-align: right;
+    }
+
+    @at-root &--text-center {
+        text-align: center;
     }
 
     @at-root &--text-justify {

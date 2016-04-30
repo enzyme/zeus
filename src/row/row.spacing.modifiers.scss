@@ -1,14 +1,17 @@
 .Row {
-    @at-root &--no-gutters {
-        .Column {
-            margin: 0;
-        }
-
-        margin-left: 0;
-        margin-right: 0;
+    // Allow a row to contain more columns than it has room for horizontally
+    // based on the specified $column-count by wrapping columns to new rows.
+    @at-root &--wrap {
+        flex-wrap: wrap;
     }
 
-    @at-root &--no-breaks {
-        margin-bottom: 0;
+    // Remove all column gutters from this row.
+    @at-root &--gapless {
+        margin-left: 0;
+        margin-right: 0;
+
+        .Column {
+            padding: 0;
+        }
     }
 }

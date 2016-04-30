@@ -1,0 +1,44 @@
+.Column {
+    // This will automagically generate a column size modifier for each
+    // device size (xs, sm, md, lg, xl) starting at 1 and going up to
+    // the specified $column-count amount. Eg: Column--xs-6 or Column--xl-1.
+    @for $i from 1 through $column-count {
+        // These will apply at all viewport sizes.
+        @at-root &--#{$i} {
+            flex: 0 0 (($i / 12) * 100%);
+        }
+
+        // These will apply at tiny viewport sizes.
+        @at-root &--xs-#{$i} {
+            flex: 0 0 (($i / 12) * 100%);
+        }
+
+        // These will apply at mobile/touch viewport sizes.
+        @at-root &--sm-#{$i} {
+            @media (min-width: $viewport-sm) {
+                flex: 0 0 (($i / 12) * 100%) !important;
+            }
+        }
+
+        // These will apply at tablet viewport sizes.
+        @at-root &--md-#{$i} {
+            @media (min-width: $viewport-md) {
+                flex: 0 0 (($i / 12) * 100%) !important;
+            }
+        }
+
+        // These will apply at desktop viewport sizes.
+        @at-root &--lg-#{$i} {
+            @media (min-width: $viewport-lg) {
+                flex: 0 0 (($i / 12) * 100%) !important;
+            }
+        }
+
+        // These will apply at large desktop viewport sizes.
+        @at-root &--xl-#{$i} {
+            @media (min-width: $viewport-xl) {
+                flex: 0 0 (($i / 12) * 100%) !important;
+            }
+        }
+    }
+}

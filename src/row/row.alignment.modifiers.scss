@@ -1,21 +1,21 @@
 .Row {
+    // Vertically align all columns to the top of the row.
     @at-root &--align-top {
-        align-items: flex-start !important;
+        align-items: flex-start;
     }
 
-    @at-root &--align-center {
-        align-items: center !important;
-    }
-
+    // Vertically align all columns to the bottom of the row.
     @at-root &--align-bottom {
-        align-items: flex-end !important;
+        align-items: flex-end;
     }
 
-    @at-root &--stretch {
-        align-items: stretch !important;
+    // Vertically align all columns to the center of the row.
+    @at-root &--align-center {
+        align-items: center;
     }
 
-    @at-root &--baseline {
-        align-items: baseline !important;
+    // Vertically align all columns in the row based on their contents baseline.
+    @at-root &--align-baseline {
+        align-items: baseline;
     }
 }

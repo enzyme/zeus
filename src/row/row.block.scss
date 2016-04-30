@@ -1,17 +1,6 @@
 .Row {
-    align-items: stretch;
-    box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: $gutter-width * 2;
     margin-left: $gutter-width * -1;
     margin-right: $gutter-width * -1;
-
-    @media (min-width: $breakpoint-md) {
-        flex-wrap: nowrap;
-    }
-
-    @if $debug {
-        border: 1px solid purple;
-    }
+    position: relative;
 }
