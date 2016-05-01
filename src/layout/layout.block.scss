@@ -1,5 +1,6 @@
-.Container {
+.Layout {
     max-width: $container-width;
+    padding: 0 $gutter-width;
     margin: 0 auto;
     overflow: hidden;
     position: relative;

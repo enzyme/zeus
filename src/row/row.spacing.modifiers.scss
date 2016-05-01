@@ -1,6 +1,4 @@
-.Row {
-    // Allow a row to contain more columns than it has room for horizontally
-    // based on the specified $column-count by wrapping columns to new rows.
+.Layout__row {
     @at-root &--wrap {
         flex-wrap: wrap;
     }
@@ -10,7 +8,7 @@
         margin-left: 0;
         margin-right: 0;
 
-        .Column {
+        .Layout__column {
             padding: 0;
         }
     }

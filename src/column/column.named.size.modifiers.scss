@@ -1,7 +1,7 @@
-.Column {
+.Layout__column {
     // These named sizes defined in this file are purely a syntactical
-    // sugar (in most cases) to specify a column size,
-    // such as a third, three-quaters etc.
+    // sugar (in most cases, depending on the settings chosen) to
+    // specify a column size, such as a third, three-quaters etc.
 
     $flex-quater: 0 0 $quater;
     $flex-three-quaters: 0 0 ($quater * 3);

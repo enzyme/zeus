@@ -1,12 +1,12 @@
-$container-width: 60rem !default;
-$gutter-width: 1rem !default;
+$container-width: 75rem !default;
+$gutter-width: 0.65rem !default;
 $column-count: 12 !default;
+
+$viewport-sm: 544px;
+$viewport-md: 768px;
+$viewport-lg: 992px;
+$viewport-xl: 1200px;
 
 $quater: (100 / 4) + 0%;
 $half: (100 / 2) + 0%;
 $third: (100 / 3) + 0%;
-
-$viewport-sm: 544px !default;
-$viewport-md: 768px !default;
-$viewport-lg: 992px !default;
-$viewport-xl: 1200px !default;
