@@ -3,28 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="bin/zeus.css">
+    <link rel="stylesheet" href="bin/zeus.min.css">
     <style>
         p {
             margin: 0;
             padding: 0;
             display: block;
             background-color: rgb(128, 180, 233);
-            border: 1px solid rgb(110, 162, 214);
+            border-radius: 5px;
+            min-height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .Layout__column:nth-child(2n) > p {
+            background-color: rgb(233, 131, 158);
         }
     </style>
 </head>
 <body>
-    <div class="Container">
-        <div class="Row Row--wrap">
-            <div class="Column Column--xs-12 Column--sm-4">
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</p>
+    <div class="Layout">
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
             </div>
-            <div class="Column Column--xs-12 Column--sm-4">
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</p>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
             </div>
-            <div class="Column Column--xs-12 Column--sm-4">
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</p>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-2">
+                <p>2</p>
+            </div>
+        </div>
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-3">
+                <p>3</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-3">
+                <p>3</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-3">
+                <p>3</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-3">
+                <p>3</p>
+            </div>
+        </div>
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-4">
+                <p>4</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-4">
+                <p>4</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-4">
+                <p>4</p>
+            </div>
+        </div>
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-6">
+                <p>6</p>
+            </div>
+            <div class="Layout__column Layout__column--xs-6">
+                <p>6</p>
+            </div>
+        </div>
+        <div class="Layout__row Layout__row--wrap">
+            <div class="Layout__column Layout__column--xs-12">
+                <p>12</p>
             </div>
         </div>
     </div>
