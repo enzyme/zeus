@@ -11,28 +11,28 @@
         // These will apply at mobile/touch viewport sizes.
         @at-root &--sm-#{$i} {
             @media (min-width: $viewport-sm) {
-                flex: 0 0 (($i / $column-count) * 100%) !important;
+                flex: 0 0 (($i / $column-count) * 100%);
             }
         }
 
         // These will apply at tablet viewport sizes.
         @at-root &--md-#{$i} {
             @media (min-width: $viewport-md) {
-                flex: 0 0 (($i / $column-count) * 100%) !important;
+                flex: 0 0 (($i / $column-count) * 100%);
             }
         }
 
         // These will apply at desktop viewport sizes.
         @at-root &--lg-#{$i} {
             @media (min-width: $viewport-lg) {
-                flex: 0 0 (($i / $column-count) * 100%) !important;
+                flex: 0 0 (($i / $column-count) * 100%);
             }
         }
 
         // These will apply at large desktop viewport sizes.
         @at-root &--xl-#{$i} {
             @media (min-width: $viewport-xl) {
-                flex: 0 0 (($i / $column-count) * 100%) !important;
+                flex: 0 0 (($i / $column-count) * 100%);
             }
         }
     }
