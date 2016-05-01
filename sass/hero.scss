@@ -1,0 +1,57 @@
+.Hero {
+    background: #f7ea3f;
+    color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    @at-root &__box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @at-root &__icon {
+        height: 8rem;
+    }
+
+    @at-root &__title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        font-size: 6rem;
+        margin: 0;
+        text-shadow: 0px 3px 0px #e1d430,
+                     0px 14px 10px rgba(0,0,0,0.15),
+                     0px 24px 2px rgba(0,0,0,0.1),
+                     0px 34px 30px rgba(0,0,0,0.1);
+    }
+
+    @at-root &__slogan {
+        margin-bottom: 50px;
+        display: block;
+    }
+
+    @at-root &__btn {
+        text-decoration: none;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin: 0 5px;
+        transition: all .3s ease;
+
+        &:focus, &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    @at-root &__mouse {
+        margin-bottom: 20px;
+    }
+}
