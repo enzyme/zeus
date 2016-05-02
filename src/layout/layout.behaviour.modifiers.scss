@@ -1,7 +1,17 @@
-.Container {
+.Layout {
     @at-root &--fluid {
         max-width: 100%;
         margin-left: $gutter-width * 2;
         margin-right: $gutter-width * 2;
+    }
+
+    @at-root &--hero {
+        height: 100vh;
+        align-items: center;
+        display: flex;
+
+        .Layout__row {
+            flex: 1;
+        }
     }
 }
