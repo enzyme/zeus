@@ -1,0 +1,23 @@
+{
+  "name": "zeus",
+  "description": "A BEM flavoured, mobile first flexbox grid framework.",
+  "main": "bin/zeus.min.css",
+  "authors": [
+    "Tristan Strathearn"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bem",
+    "flexbox",
+    "css",
+    "grid"
+  ],
+  "homepage": "https://github.com/enzyme/zeus",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
