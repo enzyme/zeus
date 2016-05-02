@@ -137,6 +137,41 @@
 .Slice {
   margin-bottom: 100px; }
 
+.Code {
+  background-color: #f5f1da;
+  color: #bb4e31;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  border: 1px solid #c3bb87;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  letter-spacing: 1px; }
+
+.Paragraph {
+  line-height: 25px; }
+
+.Link {
+  text-shadow: 0.05556em 0 0 #fff,0.11111em 0 0 #fff,0.16667em 0 0 #fff,-0.05556em 0 0 #fff,-0.11111em 0 0 #fff,-0.16667em 0 0 #fff;
+  background-image: -webkit-linear-gradient(#fe8e47, #fe8e47);
+  background-image: -moz-linear-gradient(#fe8e47, #fe8e47);
+  background-image: -ms-linear-gradient(#fe8e47, #fe8e47);
+  background-image: linear-gradient(#fe8e47, #fe8e47);
+  background-position: 0 1.06em;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  font-weight: 700; }
+
+.Pre {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
 body {
   padding: 0;
   margin: 0;

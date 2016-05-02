@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Zeus &#8212; A BEM flexbox grid.</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/enzyme/zeus/develop/bin/zeus.min.css?v=0.0.1">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/enzyme/zeus/develop/bin/zeus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/codepen-embed.min.css">
     <link rel="stylesheet" href="bin/index.css">
 </head>
 <body>
@@ -13,7 +14,11 @@
             <img src="images/icon.svg" alt="Zeus icon" class="Hero__icon">
             <h1 class="Hero__title">ZEUS</h1>
             <p class="Hero__slogan">A BEM flavoured, mobile first <strong>flexbox</strong> grid system.</p>
-            <p><a href="https://raw.githubusercontent.com/enzyme/zeus/develop/bin/zeus.min.css" class="Hero__btn Hero__btn--cta"><i class="fa fa-download" aria-hidden="true"></i> Download (min)</a><a href="https://github.com/enzyme/zeus" class="Hero__btn"><i class="fa fa-github-alt" aria-hidden="true"></i> Star on Github</a></p>
+            <p>
+                <a href="https://raw.githubusercontent.com/enzyme/zeus/develop/bin/zeus.min.css" class="Hero__btn Hero__btn--cta"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                <a href="https://github.com/enzyme/zeus" class="Hero__btn"><i class="fa fa-github-alt" aria-hidden="true"></i> Github</a>
+                <a href="https://github.com/enzyme/zeus" class="Hero__btn"><i class="fa fa-book" aria-hidden="true"></i> Docs</a>
+            </p>
         </div>
         <div class="Hero__mouse mouse-icon"><div class="wheel"></div></div>
     </header>
@@ -22,7 +27,7 @@
             <div class="Layout__row">
                 <div class="Layout__column">
                     <h1 class="Heading Heading--h1">The Grid</h1>
-                    <p>Say hello to the standard grid. It's 12 columns, flexible and does what you'd expect from a grid system.</p>
+                    <p class="Paragraph">Say hello to the standard grid. It's 12 columns, flexible and does what you'd expect from a grid system.</p>
                 </div>
             </div>
             <div class="Layout__row">
@@ -121,6 +126,29 @@
                     <p class="ExampleColumn">12</p>
                 </div>
             </div>
+            <div class="Layout__row Layout__row--wrap">
+                <div class="Layout__column Layout__column--xs-12">
+                    <p>Here's an example!</p>
+                </div>
+                <div class="Layout__column Layout__column--xs-12">
+<pre class="Pre"><code class="html">&lt;div class=&quot;Layout&quot;&gt;
+    &lt;div class=&quot;Layout__row&quot;&gt;
+        &lt;div class=&quot;Layout__column Layout__column--xs-3&quot;&gt;
+            &lt;p&gt;Tellus Quam Purus Risus Etiam&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--xs-3&quot;&gt;
+            &lt;p&gt;Risus Aenean Ridiculus Consectetur Bibendum&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--xs-3&quot;&gt;
+            &lt;p&gt;Risus Porta Ultricies&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--xs-3&quot;&gt;
+            &lt;p&gt;Sit Ultricies Euismod Inceptos&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
         </div>
     </section>
     <section class="Slice">
@@ -128,36 +156,68 @@
             <div class="Layout__row">
                 <div class="Layout__column">
                     <h1 class="Heading Heading--h1">Responsive</h1>
-                    <p>Designed as mobile first and inspired by Bootstrap, the grid is responsive to a variety of different viewport sizes.</p>
+                    <p class="Paragraph">Designed for mobile first development and inspired by <a href="http://v4-alpha.getbootstrap.com/" class="Link">Bootstrap</a>, the grid is responsive to a variety of different viewport sizes.</p>
+                    <p class="Paragraph">Go ahead and try resizing your browser window!</p>
                 </div>
             </div>
             <div class="Layout__row Layout__row--wrap">
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">Flex</h2>
-                    <p>Simply using flexbox, each column takes up an equal amount of space on the grid across all viewports, or a specific percentage using the size modifiers.</p>
+                    <p class="Paragraph">Each column takes up an equal amount of space on the grid across all viewports, or a specific percentage using the size modifiers.</p>
+                    <p class="Paragraph"><code class="Code">.Column</code> or</p>
+                    <p class="Paragraph"><code class="Code">.Column--*</code></p>
                 </div>
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">XS <code class="Heading__code">&lt;544px</code></h2>
-                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+                    <p class="Paragraph">For tiny devices like mobile phones. These columns are the starting point for any grid which are then overriden by larger viewport modifiers.</p>
+                    <p class="Paragraph"><code class="Code">.Column--xs-*</code></p>
                 </div>
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">SM <code class="Heading__code">&gt;=544px</code></h2>
-                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+                    <p class="Paragraph">For handheld devices like large phones or small tablets. These columns will be collapsed until the minimum viewport size has been reached.</p>
+                    <p class="Paragraph"><code class="Code">.Column--sm-*</code></p>
                 </div>
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">MD <code class="Heading__code">&gt;=768px</code></h2>
-                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+                    <p class="Paragraph">For larger handheld devices such as tablets. These columns will be collapsed until the minimum viewport size has been reached.</p>
+                    <p class="Paragraph"><code class="Code">.Column--md-*</code></p>
                 </div>
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">LG <code class="Heading__code">&gt;=992px</code></h2>
-                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+                    <p class="Paragraph">For devices such as laptops or smaller screen desktops. These columns will be collapsed until the minimum viewport size has been reached.</p>
+                    <p class="Paragraph"><code class="Code">.Column--lg-*</code></p>
                 </div>
                 <div class="Layout__column Layout__column--xs-12 Layout__column--sm-4 Layout__column--lg-2">
                     <h2 class="Heading Heading--h2">XL <code class="Heading__code">&gt;=1200px</code></h2>
-                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+                    <p class="Paragraph">For your large desktop and general purpose displays. These columns will be collapsed until the minimum viewport size has been reached.</p>
+                    <p class="Paragraph"><code class="Code">.Column--xl-*</code></p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="Slice">
+        <div class="Layout">
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <h1 class="Heading Heading--h1">Customizable</h1>
+                    <p class="Paragraph">Need a specificly sized container? Want more gutter space? Need more or less columns? <strong>We've got your covered!</strong></p>
+                    <p class="Paragraph">Simply by using the <code class="Code">SASS</code> version of Zeus, you can override the variables <code class="Code">$container-width</code> <code class="Code">$gutter-width</code> and <code class="Code">$column-count</code> respectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Slice">
+        <div class="Layout">
+            <div class="Layout__row">
+                <div class="Layout__column Layout__column--text-center">
+                    <p class="Paragraph">Created by <a href="https://github.com/enzyme" class="Link">Tristan Strathearn</a>.</p>
+                    <p class="Paragraph">Licensed under the <code class="Code">MIT</code> license and free to use by anyone!</p>
+                    <p class="Paragraph"><i class="fa fa-heart" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
