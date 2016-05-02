@@ -1,0 +1,48 @@
+.Layout__column {
+    // This will automagically generate column sized offsets for each
+    // device size (xs, sm, md, lg, xl) starting at 1 and going up to
+    // the specified $column-count amount. Eg: Column--xs-offset-6.
+
+    @for $i from 1 through $column-count {
+        // These will apply at all viewport sizes.
+        @at-root &--offset-#{$i}, &--xs-offset-#{$i} {
+            margin-left: ($i / $column-count) * 100%;
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        // These will apply at mobile/touch viewport sizes.
+        @at-root &--sm-offset-#{$i} {
+            @media (min-width: $viewport-sm) {
+                margin-left: ($i / $column-count) * 100%;
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        // These will apply at tablet viewport sizes.
+        @at-root &--md-offset-#{$i} {
+            @media (min-width: $viewport-md) {
+                margin-left: ($i / $column-count) * 100%;
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        // These will apply at desktop viewport sizes.
+        @at-root &--lg-offset-#{$i} {
+            @media (min-width: $viewport-lg) {
+                margin-left: ($i / $column-count) * 100%;
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        // These will apply at large desktop viewport sizes.
+        @at-root &--xl-offset-#{$i} {
+            @media (min-width: $viewport-xl) {
+                margin-left: ($i / $column-count) * 100%;
+            }
+        }
+    }
+}
