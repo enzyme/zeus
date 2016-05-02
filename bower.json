@@ -1,7 +1,7 @@
 {
-  "name": "zeus",
+  "name": "zeus-grid",
   "description": "A BEM flavoured, mobile first flexbox grid framework.",
-  "main": "bin/zeus.min.css",
+  "main": "bin/zeus.css",
   "authors": [
     "Tristan Strathearn"
   ],
