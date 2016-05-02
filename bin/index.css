@@ -13,7 +13,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
   .Hero__icon {
     height: 8rem; }
   .Hero__title {
