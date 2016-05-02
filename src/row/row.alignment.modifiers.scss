@@ -1,21 +1,21 @@
 .Layout__row {
     // Vertically align all columns to the top of the row.
-    @at-root &--align-top {
+    @at-root &--valign-top {
         align-items: flex-start;
     }
 
     // Vertically align all columns to the bottom of the row.
-    @at-root &--align-bottom {
+    @at-root &--valign-bottom {
         align-items: flex-end;
     }
 
     // Vertically align all columns to the center of the row.
-    @at-root &--align-center {
+    @at-root &--valign-center {
         align-items: center;
     }
 
     // Vertically align all columns in the row based on their contents baseline.
-    @at-root &--align-baseline {
+    @at-root &--valign-baseline {
         align-items: baseline;
     }
 }
