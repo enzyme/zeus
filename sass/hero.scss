@@ -51,6 +51,16 @@
         }
     }
 
+    @at-root &__code {
+        font-family: monospace;
+        background: black;
+        color: white;
+        padding: 8px 15px;
+        margin-top: 25px;
+        display: inline-block;
+        border-radius: 25px;
+    }
+
     @at-root &__mouse {
         margin-bottom: 20px;
     }

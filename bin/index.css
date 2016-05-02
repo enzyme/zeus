@@ -36,6 +36,14 @@
     .Hero__btn:focus, .Hero__btn:hover {
       background-color: black;
       color: white; }
+  .Hero__code {
+    font-family: monospace;
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    margin-top: 25px;
+    display: inline-block;
+    border-radius: 25px; }
   .Hero__mouse {
     margin-bottom: 20px; }
 
