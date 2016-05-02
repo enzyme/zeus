@@ -1,3 +1,7 @@
 .Slice {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+
+    @media (min-width: 544px) {
+        margin-bottom: 100px;
+    }
 }

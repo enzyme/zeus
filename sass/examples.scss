@@ -1,5 +1,5 @@
 .ExampleColumn {
-    background-color: #c9c9c9;
+    background-color: #FFC107;
     min-height: 30px;
     border-radius: 5px;
     display: flex;
@@ -13,6 +13,6 @@
 
 .Layout__column:nth-child(2n) {
     .ExampleColumn {
-        background-color: #b9b6b6;
+        background-color: #FF9800;
     }
 }
