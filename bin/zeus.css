@@ -407,6 +407,9 @@ body {
 .Layout__row--valign-baseline {
   align-items: baseline; }
 
+.Layout__row--valign-stretch {
+  align-items: stretch; }
+
 .Layout__row--wrap {
   flex-wrap: wrap; }
 
@@ -976,3 +979,8 @@ body {
 @media (min-width: 1200px) {
   .Layout__column--xl-offset-12 {
     margin-left: 100%; } }
+
+.Layout__column--filler {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column; }
