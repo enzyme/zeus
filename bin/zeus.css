@@ -423,6 +423,8 @@ body {
   padding-top: 0;
   flex: 1;
   position: relative; }
+  .Layout__column .Layout__row {
+    margin-bottom: -1.3rem; }
 
 .Layout__column--quater, .Layout__column--xs-quater {
   flex: 0 0 25%; }
