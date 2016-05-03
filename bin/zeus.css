@@ -980,7 +980,10 @@ body {
   .Layout__column--xl-offset-12 {
     margin-left: 100%; } }
 
-.Layout__column--filler {
+.Layout__column--fill-parent {
   display: flex;
   align-items: stretch;
   flex-direction: column; }
+
+.Layout__column--fill-child {
+  flex: 1; }
