@@ -18,4 +18,9 @@
     @at-root &--valign-baseline {
         align-items: baseline;
     }
+
+    // Vertically align all columns to the center of the row.
+    @at-root &--valign-stretch {
+        align-items: stretch;
+    }
 }
