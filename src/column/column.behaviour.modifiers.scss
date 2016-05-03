@@ -1,7 +1,11 @@
 .Layout__column {
-    @at-root &--filler {
+    @at-root &--fill-parent {
         display: flex;
         align-items: stretch;
         flex-direction: column;
+    }
+
+    @at-root &--fill-child {
+        flex: 1;
     }
 }
