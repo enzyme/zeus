@@ -1,0 +1,7 @@
+.Layout__column {
+    @at-root &--filler {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
