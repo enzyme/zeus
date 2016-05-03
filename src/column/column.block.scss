@@ -5,4 +5,8 @@
     padding-top: 0;
     flex: 1;
     position: relative;
+
+    .Layout__row {
+        margin-bottom: $gutter-width * -2;
+    }
 }
