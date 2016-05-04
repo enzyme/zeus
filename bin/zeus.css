@@ -733,6 +733,86 @@ body {
   text-align: justify; }
 
 @media (max-width: 543px) {
+  .Layout__column--xs-text-left {
+    text-align: left !important; } }
+
+@media (max-width: 543px) {
+  .Layout__column--xs-text-right {
+    text-align: right !important; } }
+
+@media (max-width: 543px) {
+  .Layout__column--xs-text-center {
+    text-align: center !important; } }
+
+@media (max-width: 543px) {
+  .Layout__column--xs-text-justify {
+    text-align: justify !important; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__column--sm-text-left {
+    text-align: left !important; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__column--sm-text-right {
+    text-align: right !important; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__column--sm-text-center {
+    text-align: center !important; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__column--sm-text-justify {
+    text-align: justify !important; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__column--md-text-left {
+    text-align: left !important; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__column--md-text-right {
+    text-align: right !important; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__column--md-text-center {
+    text-align: center !important; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__column--md-text-justify {
+    text-align: justify !important; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__column--lg-text-left {
+    text-align: left !important; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__column--lg-text-right {
+    text-align: right !important; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__column--lg-text-center {
+    text-align: center !important; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__column--lg-text-justify {
+    text-align: justify !important; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-text-left {
+    text-align: left !important; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-text-right {
+    text-align: right !important; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-text-center {
+    text-align: center !important; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-text-justify {
+    text-align: justify !important; } }
+
+@media (max-width: 543px) {
   .Layout__column--hidden-xs {
     display: none !important; } }
 
