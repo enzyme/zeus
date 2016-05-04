@@ -156,6 +156,8 @@
   margin: 0;
   padding: 0;
   font-weight: 700; }
+  .ExampleColumn--large {
+    min-height: 200px; }
 
 .Layout__column:nth-child(2n) .ExampleColumn {
   background-color: #FF9800; }
@@ -225,10 +227,13 @@
     font-weight: 700;
     text-decoration: none;
     color: black;
-    margin-left: 1rem; }
+    margin-left: 0.8rem; }
 
 .DocBody {
-  padding-top: 10rem; }
+  padding-top: 6rem; }
+  @media (min-width: 544px) {
+    .DocBody {
+      padding-top: 10rem; } }
 
 .ClassMap {
   font-family: "Roboto Mono";

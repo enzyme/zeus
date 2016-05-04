@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
     font-weight: 700;
+
+    @at-root &--large {
+        min-height: 200px;
+    }
 }
 
 .Layout__column:nth-child(2n) {

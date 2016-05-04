@@ -16,7 +16,7 @@
     <title>Zeus &#8212; A BEM flexbox grid framework.</title>
 
     <!-- Page styles. -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/enzyme/zeus/develop/bin/zeus.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/enzyme/zeus/master/bin/zeus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/codepen-embed.min.css">
     <link rel="stylesheet" href="bin/index.css">
@@ -25,10 +25,10 @@
     <header class="Navigation">
         <div class="Layout">
             <div class="Layout__row Layout__row--gapless Layout__row--valign-center">
-                <div class="Layout__column Layout__column--xs-2">
+                <div class="Layout__column Layout__column--sm-2 Layout__column--hidden-xs">
                     <a href="index.html"><img src="images/icon.svg" alt="Zeus icon" class="Navigation__icon"></a>
                 </div>
-                <div class="Layout__column Layout__column--xs-10 Layout__column--text-right">
+                <div class="Layout__column Layout__column--xs-12 Layout__column--sm-10 Layout__column--text-right">
                     <ul class="Navigation__list">
                         <li class="Navigation__item">
                             <a href="index.html" class="Navigation__link">
@@ -53,6 +53,11 @@
                         <li class="Navigation__item">
                             <a href="#metro" class="Navigation__link">
                                 Metro
+                            </a>
+                        </li>
+                        <li class="Navigation__item">
+                            <a href="https://github.com/enzyme/zeus" class="Navigation__link">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
@@ -215,6 +220,98 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <p class="Paragraph">If you want something more readable for simplistic column types, you can use the named modifiers such as <code class="Code">Layout__column--third</code> or <code class="Code">Layout__column--md-half</code> (which would only take up half the row at the md viewport).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Slice">
+        <div class="Layout">
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <h1 id="metro" class="Heading Heading--h1">Metro</h1>
+                    <ul class="ClassMap">
+                        <li class="ClassMap__parent">Layout__column</li>
+                        <li class="ClassMap__child">--fill-parent</li>
+                        <li class="ClassMap__child">--fill-child</li>
+                    </ul>
+                    <p class="Paragraph">One additional benefit of using flexbox is it's extremely easy to create metro style grids using Zeus. All you need to do is use the modifiers <code class="Code">Layout__row--valign-stretch</code> <code class="Code">Layout__column--fill-parent</code> and <code class="Code">Layout__column--fill-child</code> inside of a standard grid setup.</p>
+                </div>
+            </div>
+            <div class="Layout__row Layout__row--wrap Layout__row--valign-stretch">
+                <div class="Layout__column Layout__column--4">
+                    <div class="Layout__row Layout__row--wrap">
+                        <div class="Layout__column Layout__column--12">
+                            <p class="ExampleColumn ExampleColumn--large">Metro!</p>
+                        </div>
+                        <div class="Layout__column Layout__column--12">
+                            <p class="ExampleColumn ExampleColumn--large">Metro!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Layout__column Layout__column--fill-parent Layout__column--8">
+                    <p class="ExampleColumn Layout__column--fill-child">Metro!</p>
+                </div>
+                <div class="Layout__column Layout__column--8">
+                    <div class="Layout__row Layout__row--wrap">
+                        <div class="Layout__column Layout__column--6">
+                            <p class="ExampleColumn ExampleColumn--large">Metro!</p>
+                        </div>
+                        <div class="Layout__column Layout__column--6">
+                            <p class="ExampleColumn ExampleColumn--large">Metro!</p>
+                        </div>
+                        <div class="Layout__column Layout__column--12">
+                            <p class="ExampleColumn ExampleColumn--large">Metro!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Layout__column Layout__column--fill-parent Layout__column--4">
+                    <p class="ExampleColumn Layout__column--fill-child">Metro!</p>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+<pre class="Pre"><code class="html">&lt;div class=&quot;Layout__row Layout__row--wrap Layout__row--valign-stretch&quot;&gt;
+    &lt;div class=&quot;Layout__column Layout__column--4&quot;&gt;
+        &lt;div class=&quot;Layout__row Layout__row--wrap&quot;&gt;
+            &lt;div class=&quot;Layout__column Layout__column--12&quot;&gt;
+                &lt;p class=&quot;MetroTile&quot;&gt;Metro!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;Layout__column Layout__column--12&quot;&gt;
+                &lt;p class=&quot;MetroTile&quot;&gt;Metro!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Layout__column Layout__column--fill-parent Layout__column--8&quot;&gt;
+        &lt;p class=&quot;MetroTile Layout__column--fill-child&quot;&gt;Metro!&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Layout__column Layout__column--8&quot;&gt;
+        &lt;div class=&quot;Layout__row Layout__row--wrap&quot;&gt;
+            &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+                &lt;p class=&quot;MetroTile&quot;&gt;Metro!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+                &lt;p class=&quot;MetroTile&quot;&gt;Metro!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;Layout__column Layout__column--12&quot;&gt;
+                &lt;p class=&quot;MetroTile&quot;&gt;Metro!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Layout__column Layout__column--fill-parent Layout__column--4&quot;&gt;
+        &lt;p class=&quot;MetroTile Layout__column--fill-child&quot;&gt;Metro!&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <p class="Paragraph">As you probably noticed in the example, we added the <code class="Code">Layout__column--fill-child</code> on our <code class="Code">p</code> tag. All that modifier does is set the css property <code class="Code">flex: 1;</code> - that's it! The rest is taken care of by Zeus.</p>
                 </div>
             </div>
         </div>
