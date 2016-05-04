@@ -14,4 +14,124 @@
     @at-root &--text-justify {
         text-align: justify;
     }
+
+    @at-root &--xs-text-left {
+        @media (max-width: ($viewport-sm - 1)) {
+            text-align: left !important;
+        }
+    }
+
+    @at-root &--xs-text-right {
+        @media (max-width: ($viewport-sm - 1)) {
+            text-align: right !important;
+        }
+    }
+
+    @at-root &--xs-text-center {
+        @media (max-width: ($viewport-sm - 1)) {
+            text-align: center !important;
+        }
+    }
+
+    @at-root &--xs-text-justify {
+        @media (max-width: ($viewport-sm - 1)) {
+            text-align: justify !important;
+        }
+    }
+
+    @at-root &--sm-text-left {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            text-align: left !important;
+        }
+    }
+
+    @at-root &--sm-text-right {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            text-align: right !important;
+        }
+    }
+
+    @at-root &--sm-text-center {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            text-align: center !important;
+        }
+    }
+
+    @at-root &--sm-text-justify {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            text-align: justify !important;
+        }
+    }
+
+    @at-root &--md-text-left {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            text-align: left !important;
+        }
+    }
+
+    @at-root &--md-text-right {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            text-align: right !important;
+        }
+    }
+
+    @at-root &--md-text-center {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            text-align: center !important;
+        }
+    }
+
+    @at-root &--md-text-justify {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            text-align: justify !important;
+        }
+    }
+
+    @at-root &--lg-text-left {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            text-align: left !important;
+        }
+    }
+
+    @at-root &--lg-text-right {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            text-align: right !important;
+        }
+    }
+
+    @at-root &--lg-text-center {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            text-align: center !important;
+        }
+    }
+
+    @at-root &--lg-text-justify {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            text-align: justify !important;
+        }
+    }
+
+    @at-root &--xl-text-left {
+        @media (min-width: $viewport-xl) {
+            text-align: left !important;
+        }
+    }
+
+    @at-root &--xl-text-right {
+        @media (min-width: $viewport-xl) {
+            text-align: right !important;
+        }
+    }
+
+    @at-root &--xl-text-center {
+        @media (min-width: $viewport-xl) {
+            text-align: center !important;
+        }
+    }
+
+    @at-root &--xl-text-justify {
+        @media (min-width: $viewport-xl) {
+            text-align: justify !important;
+        }
+    }
 }
