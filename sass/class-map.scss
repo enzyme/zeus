@@ -15,4 +15,13 @@
         list-style-type: none;
         margin-bottom: 0.5rem;
     }
+
+    @at-root &__meta {
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+
+        @at-root &::before {
+            content: "✪ "
+        }
+    }
 }

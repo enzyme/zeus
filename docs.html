@@ -26,7 +26,7 @@
         <div class="Layout">
             <div class="Layout__row Layout__row--gapless Layout__row--valign-center">
                 <div class="Layout__column Layout__column--xs-2">
-                    <img src="images/icon.svg" alt="Zeus icon" class="Navigation__icon">
+                    <a href="index.html"><img src="images/icon.svg" alt="Zeus icon" class="Navigation__icon"></a>
                 </div>
                 <div class="Layout__column Layout__column--xs-10 Layout__column--text-right">
                     <ul class="Navigation__list">
@@ -50,6 +50,11 @@
                                 Column
                             </a>
                         </li>
+                        <li class="Navigation__item">
+                            <a href="#metro" class="Navigation__link">
+                                Metro
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +76,7 @@
 <pre class="Pre"><code class="html">&lt;div class=&quot;Layout&quot;&gt;
     &lt;!-- ... --&gt;
 &lt;/div&gt;</code></pre>
-                    <p class="Paragraph">The default container width is specified by the <code class="Code">$container-width</code> variable, which by default is set to <code class="Code">75rem</code>.</p>
+                    <p class="Paragraph">The container width is specified by the <code class="Code">$container-width</code> variable, which by default is set to <code class="Code">75rem</code>.</p>
                     <p class="Paragraph">Layout also has a special modifier named <code class="Code">Layout--hero</code> that creates a 100% viewport height container with all columns centered vertically within it. Check out the <a class="Link" href="layout-hero.html">demo here</a> if you're interested.</p>
                 </div>
             </div>
@@ -94,12 +99,16 @@
                         <li class="ClassMap__child">--valign-stretch</li>
                     </ul>
                     <p class="Paragraph">Rows are exactly what you'd expect. The two most important modifiers you'll likely use are <code class="Code">Layout__row--gapless</code> which creates rows that contain columns without gutters, and <code class="Code">Layout__row--wrap</code> which allows rows to contain more columns that they'd naturally fit horizontally.</p>
-                    <p class="Paragraph">An example of a standard row with 3 columns.</p>
-                    <div class="Layout__row">
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                    </div>
+                    <p class="Paragraph Paragraph--no-bottom">An example of a standard row with 3 columns.</p>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
 <pre class="Pre"><code class="html">&lt;div class=&quot;Layout&quot;&gt;
     &lt;div class=&quot;Layout__row&quot;&gt;
         &lt;div class=&quot;Layout__column Layout__column--4&quot;&gt;
@@ -113,13 +122,17 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                    <p class="Paragraph">Now the same example with <code class="Code">Layout__row--gapless</code> applied.</p>
-                    <div class="Layout__row Layout__row--gapless">
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                        <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
-                    </div>
-                    <p class="Paragraph"><strong>Pro tip!</strong> Rows and columns can be nested for even more complex layouts. If you're curious, take a look at this source code for this page.</p>
+                    <p class="Paragraph Paragraph--no-bottom">Now the same example with <code class="Code">Layout__row--gapless</code> applied.</p>
+                </div>
+            </div>
+            <div class="Layout__row Layout__row--gapless">
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+                <div class="Layout__column Layout__column--4"><p class="ExampleColumn">4</p></div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <p class="Paragraph"><strong>✪ Pro tip!</strong> Rows and columns can be nested for even more complex layouts. If you're curious, take a look at this source code for this page, or see the <a href="#metro" class="Link">Metro</a> example below.</p>
                 </div>
             </div>
         </div>
@@ -132,9 +145,76 @@
                     <h1 id="column" class="Heading Heading--h1">Column</h1>
                     <ul class="ClassMap">
                         <li class="ClassMap__parent">Layout__column</li>
+                        <li class="ClassMap__child">--[%-]#</li>
+                        <li class="ClassMap__child">--[%-]offset-#</li>
+                        <li class="ClassMap__child">--[%-]quater</li>
+                        <li class="ClassMap__child">--[%-]three-quaters</li>
+                        <li class="ClassMap__child">--[%-]third</li>
+                        <li class="ClassMap__child">--[%-]two-thirds</li>
+                        <li class="ClassMap__child">--[%-]half</li>
+                        <li class="ClassMap__meta">[%-] is the optional viewport size, xs-, sm-, md-, lg- or xl-.</li>
+                        <li class="ClassMap__meta"># is the column size, eg: 1, 2, 6, 12.</li>
+                        <li class="ClassMap__child">--text-left</li>
+                        <li class="ClassMap__child">--text-right</li>
+                        <li class="ClassMap__child">--text-center</li>
+                        <li class="ClassMap__child">--text-justify</li>
+                        <li class="ClassMap__child">--hidden-%</li>
+                        <li class="ClassMap__meta">% is the viewport size, xs, sm, md, lg or xl.</li>
+                        <li class="ClassMap__child">--fill-parent</li>
+                        <li class="ClassMap__child">--fill-child</li>
                     </ul>
-                    <p class="Paragraph">Columns are were all the magic happens. Brace yourselves for magical things.</p>
-                    <p><strong>Documentation coming soon!</strong></p>
+                    <p class="Paragraph Paragraph--no-bottom">Columns are where all the fun happens. We already have an example of a basic column setup in the row documentation above, so let's try something a bit more interesting. First of all, because all columns are built upon <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="Link" target="_blank">flexbox</a>, we can add as many generic columns as we want, and they'll just fit themselves! Try it out...</p>
+                </div>
+            </div>
+            <div id="js-columtastic" class="Layout__row">
+                <div class="Layout__column"><p class="ExampleColumn">auto</p></div>
+                <div class="Layout__column"><p class="ExampleColumn">auto</p></div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column Layout__column--text-center">
+                    <button id="js-add-column">Add Column!</button>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+                    <p class="Paragraph">If you don't want your columns automatically being sized, you can specify their sizes using the modifiers listed above. For example, using the standard 12 column grid, you could define columns such as <code class="Code">Layout__column Layout__column--xs-6</code> or <code class="Code">Layout__column Layout__column--xl-8</code>.</p>
+                    <p class="Paragraph">Nesting columns is easy too, take a look at the example below.</p>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column Layout__column--6">
+                    <div class="Layout__row">
+                        <div class="Layout__column Layout__column--6">
+                            <p class="ExampleColumn">child-6</p>
+                        </div>
+                        <div class="Layout__column Layout__column--6">
+                            <p class="ExampleColumn">child-6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Layout__column Layout__column--6">
+                    <p class="ExampleColumn">6</p>
+                </div>
+            </div>
+            <div class="Layout__row">
+                <div class="Layout__column">
+<pre class="Pre"><code class="html">&lt;div class=&quot;Layout&quot;&gt;
+    &lt;div class=&quot;Layout__row&quot;&gt;
+        &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+            &lt;div class=&quot;Layout__row&quot;&gt;
+                &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+                    &lt;p&gt;child-6&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+                    &lt;p&gt;child-6&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--6&quot;&gt;
+            &lt;p&gt;6&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
         </div>
@@ -154,6 +234,7 @@
 
     <!-- Page scripts. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -163,6 +244,12 @@
 
         ga('create', 'UA-77219606-1', 'auto');
         ga('send', 'pageview');
+
+        $(function() {
+            $('#js-add-column').on('click', function() {
+                $('#js-columtastic').append('<div class="Layout__column"><p class="ExampleColumn">auto</p></div>');
+            });
+        });
     </script>
 </body>
 </html>

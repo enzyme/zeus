@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway:900|Roboto:400,700|Roboto+Mono");
 .mouse-icon {
   border: 2px solid #000;
@@ -163,7 +164,7 @@
   margin-bottom: 20px; }
   @media (min-width: 544px) {
     .Slice {
-      margin-bottom: 100px; } }
+      margin-bottom: 50px; } }
 
 .Code {
   background-color: #f5f1da;
@@ -178,6 +179,8 @@
 
 .Paragraph {
   line-height: 25px; }
+  .Paragraph--no-bottom {
+    margin-bottom: 0px; }
 
 .Link {
   text-shadow: 0.05556em 0 0 #fff,0.11111em 0 0 #fff,0.16667em 0 0 #fff,-0.05556em 0 0 #fff,-0.11111em 0 0 #fff,-0.16667em 0 0 #fff;
@@ -240,6 +243,11 @@
     color: #646464;
     list-style-type: none;
     margin-bottom: 0.5rem; }
+  .ClassMap__meta {
+    list-style-type: none;
+    margin-bottom: 0.5rem; }
+    .ClassMap__meta::before {
+      content: "✪ "; }
 
 body {
   padding: 0;

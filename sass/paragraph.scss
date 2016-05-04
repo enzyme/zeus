@@ -1,3 +1,7 @@
 .Paragraph {
     line-height: 25px;
+
+    @at-root &--no-bottom {
+        margin-bottom: 0px;
+    }
 }
