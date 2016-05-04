@@ -200,6 +200,47 @@
   margin: 0;
   padding: 0; }
 
+.Navigation {
+  background-color: #FFEB3B;
+  padding: 1rem 0rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0; }
+  .Navigation__icon {
+    height: 3rem; }
+  .Navigation__list {
+    margin: 0;
+    padding: 0; }
+  .Navigation__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block; }
+  .Navigation__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem; }
+
+.DocBody {
+  padding-top: 10rem; }
+
+.ClassMap {
+  font-family: "Roboto Mono";
+  background-color: #f0f0f0;
+  padding: 3rem;
+  margin-bottom: 2rem; }
+  .ClassMap__parent {
+    list-style-type: square;
+    font-weight: bold;
+    margin-bottom: 0.5rem; }
+  .ClassMap__child {
+    color: #646464;
+    list-style-type: none;
+    margin-bottom: 0.5rem; }
+
 body {
   padding: 0;
   margin: 0;

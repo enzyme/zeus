@@ -1,0 +1,18 @@
+.ClassMap {
+    font-family: 'Roboto Mono', ;
+    background-color: rgb(240, 240, 240);
+    padding: 3rem;
+    margin-bottom: 2rem;
+
+    @at-root &__parent {
+        list-style-type: square;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    @at-root &__child {
+        color: rgb(100, 100, 100);
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+    }
+}

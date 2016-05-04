@@ -1,0 +1,32 @@
+.Navigation {
+    background-color: #FFEB3B;
+    padding: 1rem 0rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    @at-root &__icon {
+        height: 3rem;
+    }
+
+    @at-root &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    @at-root &__item {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    @at-root &__link {
+        font-weight: 700;
+        text-decoration: none;
+        color: black;
+        margin-left: 1rem;
+    }
+}
