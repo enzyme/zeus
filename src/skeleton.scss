@@ -1,6 +1,6 @@
 // Set some initial sensible defaults.
 
-*, *:before, *:after {
+*, *:before, *::before, *:after, *::after {
     box-sizing: border-box;
 }
 
