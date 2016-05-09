@@ -70,6 +70,45 @@
         <div class="Layout">
             <div class="Layout__row">
                 <div class="Layout__column">
+                    <h1 id="container" class="Heading Heading--h1">Settings</h1>
+                    <p class="Paragraph">When using the <code class="Code">SASS</code> source for Zeus, you can alter a number of variables to modify the grid to your needs.</p>
+                    <p class="Paragraph">Make sure you define the new values for the following variables before importing <code class="Code">zeus.scss</code> in your sass project.</p>
+                    <table class="Table">
+                        <tr class="Table__row">
+                            <th class="Table__header">Variable name</th>
+                            <th class="Table__header">Purpose</th>
+                            <th class="Table__header">Default</th>
+                        </tr>
+                        <tr class="Table__row">
+                            <td class="Table__cell"><code class="Code">$container-width</code></td>
+                            <td class="Table__cell">How wide the <strong>Layout</strong> container is in <strong>REM's</strong> when used without the <code class="Code">Layout--fluid</code> modifier.</td>
+                            <td class="Table__cell">75</td>
+                        </tr>
+                        <tr class="Table__row">
+                            <td class="Table__cell"><code class="Code">$gutter-width</code></td>
+                            <td class="Table__cell">How much space is defined around each column in <strong>REM's</strong> when used without the <code class="Code">Layout__row--gapless</code> modifier.</td>
+                            <td class="Table__cell">0.65</td>
+                        </tr>
+                        <tr class="Table__row">
+                            <td class="Table__cell"><code class="Code">$column-count</code></td>
+                            <td class="Table__cell">How many columns will be generated and available via column size modifiers.</td>
+                            <td class="Table__cell">12</td>
+                        </tr>
+                        <tr class="Table__row">
+                            <td class="Table__cell"><code class="Code">$lc-blocks</code></td>
+                            <td class="Table__cell">Whether lower case block names should be generated during compilation. Eg: <code class="Code">Layout__row</code> vs. <code class="Code">layout__row</code>.</td>
+                            <td class="Table__cell">false</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Slice">
+        <div class="Layout">
+            <div class="Layout__row">
+                <div class="Layout__column">
                     <h1 id="container" class="Heading Heading--h1">Container</h1>
                     <ul class="ClassMap">
                         <li class="ClassMap__parent">Layout</li>

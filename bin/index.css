@@ -254,6 +254,15 @@
     .ClassMap__meta::before {
       content: "✪ "; }
 
+.Table {
+  width: 100%; }
+  .Table__header {
+    text-align: left;
+    background-color: #f0f0f0;
+    padding: 0.8rem 0.5rem; }
+  .Table__cell {
+    padding: 0.8rem 0.5rem; }
+
 body {
   padding: 0;
   margin: 0;

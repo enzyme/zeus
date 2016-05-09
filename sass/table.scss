@@ -1,0 +1,17 @@
+.Table {
+    width: 100%;
+
+    @at-root &__row {
+        //
+    }
+
+    @at-root &__header {
+        text-align: left;
+        background-color: rgb(240, 240, 240);
+        padding: 0.8rem 0.5rem;
+    }
+
+    @at-root &__cell {
+        padding: 0.8rem 0.5rem;
+    }
+}
