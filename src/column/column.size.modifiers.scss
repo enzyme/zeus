@@ -1,4 +1,4 @@
-.Layout__column {
+.#{$block-name-layout}__column {
     // This will automagically generate a column size modifier for each
     // device size (xs, sm, md, lg, xl) starting at 1 and going up to
     // the specified $column-count amount. Eg: Column--xs-6 or Column--1.

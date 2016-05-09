@@ -1,4 +1,4 @@
-.Layout__column {
+.#{$block-name-layout}__column {
     @at-root &--hidden-xs {
         @media (max-width: ($viewport-sm - 1)) {
             display: none !important;

@@ -1,4 +1,4 @@
-.Layout__column {
+.#{$block-name-layout}__column {
     // These named sizes defined in this file are purely a syntactical
     // sugar (in most cases, depending on the settings chosen) to
     // specify a column size, such as a third, three-quaters etc.

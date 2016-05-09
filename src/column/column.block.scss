@@ -1,4 +1,4 @@
-.Layout__column {
+.#{$block-name-layout}__column {
     overflow: hidden;
     padding: $gutter-width;
     padding-bottom: $gutter-width * 2;
@@ -6,7 +6,7 @@
     flex: 1;
     position: relative;
 
-    .Layout__row {
+    .#{$block-name-layout}__row {
         margin-bottom: $gutter-width * -2;
     }
 }

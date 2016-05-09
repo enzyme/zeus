@@ -1,4 +1,4 @@
-.Layout__column {
+.#{$block-name-layout}__column {
     @at-root &--text-left {
         text-align: left;
     }

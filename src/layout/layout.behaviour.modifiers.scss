@@ -1,4 +1,4 @@
-.Layout {
+.#{$block-name-layout} {
     @at-root &--fluid {
         max-width: 100%;
         margin-left: $gutter-width * 2;
@@ -10,7 +10,7 @@
         align-items: center;
         display: flex;
 
-        .Layout__row {
+        .#{$block-name-layout}__row {
             flex: 1;
         }
     }

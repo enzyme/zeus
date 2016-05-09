@@ -1,4 +1,4 @@
-.Layout__row {
+.#{$block-name-layout}__row {
     @at-root &--wrap {
         flex-wrap: wrap;
     }
@@ -8,7 +8,7 @@
         margin-left: 0;
         margin-right: 0;
 
-        .Layout__column {
+        .#{$block-name-layout}__column {
             padding: 0;
         }
     }

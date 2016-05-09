@@ -1,6 +1,12 @@
 $container-width: 75rem !default;
 $gutter-width: 0.65rem !default;
 $column-count: 12 !default;
+$lc-blocks: false !default;
+
+$block-name-layout: 'Layout';
+@if $lc-blocks {
+    $block-name-layout: 'layout';
+}
 
 $viewport-sm: 544px;
 $viewport-md: 768px;
