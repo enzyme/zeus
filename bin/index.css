@@ -263,6 +263,18 @@
   .Table__cell {
     padding: 0.8rem 0.5rem; }
 
+.HeroExample {
+  background-color: #1e1e1e;
+  color: white; }
+  .HeroExample__header {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #646464;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .HeroExample__stat {
+    font-size: 1.5rem; }
+
 body {
   padding: 0;
   margin: 0;
