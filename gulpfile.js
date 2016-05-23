@@ -1,13 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
+var rename = require("gulp-rename");
 var stripCssComments = require('gulp-strip-css-comments');
 
 gulp.task('build-dev', function() {
     return gulp
-        .src('./src/zeus.scss')
+        .src('./src/zeus-dev.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(rename('zeus.css'))
         .pipe(gulp.dest('./bin'));
 });
 

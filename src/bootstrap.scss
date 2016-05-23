@@ -24,5 +24,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-@import '../../../node_modules/normalize.css/normalize';
-@import 'bootstrap.scss';
+// Initial configuration.
+@import 'skeleton.scss';
+
+// Global settings.
+@import 'variables.scss';
+
+// Components.
+@import 'layout/index.scss';
+@import 'row/index.scss';
+@import 'column/index.scss';
