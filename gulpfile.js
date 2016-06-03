@@ -22,3 +22,5 @@ gulp.task('build-prod', ['build-dev'], function() {
 });
 
 gulp.task('build', ['build-dev', 'build-prod']);
+
+gulp.task('default', ['build']);
