@@ -424,7 +424,6 @@ body {
   max-width: 75rem;
   padding: 0 0.65rem;
   margin: 0 auto;
-  overflow: hidden;
   position: relative; }
 
 .Layout--fluid {
@@ -473,7 +472,6 @@ body {
   margin-bottom: -1.3rem; }
 
 .Layout__column {
-  overflow: hidden;
   padding: 0.65rem;
   padding-bottom: 1.3rem;
   padding-top: 0;
