@@ -1,5 +1,4 @@
 @include root('column') {
-    overflow: hidden;
     padding: $gutter-width;
     padding-bottom: $gutter-width * 2;
     padding-top: 0;
