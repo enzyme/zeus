@@ -1,26 +1,26 @@
-.#{$block-name-layout}__row {
+@include root('row') {
     // Vertically align all columns to the top of the row.
-    @at-root &--valign-top {
+    @include modifier('valign-top') {
         align-items: flex-start;
     }
 
     // Vertically align all columns to the bottom of the row.
-    @at-root &--valign-bottom {
+    @include modifier('valign-bottom') {
         align-items: flex-end;
     }
 
     // Vertically align all columns to the center of the row.
-    @at-root &--valign-center {
+    @include modifier('valign-center') {
         align-items: center;
     }
 
     // Vertically align all columns in the row based on their contents baseline.
-    @at-root &--valign-baseline {
+    @include modifier('valign-baseline') {
         align-items: baseline;
     }
 
     // Vertically align all columns to the center of the row.
-    @at-root &--valign-stretch {
+    @include modifier('valign-stretch') {
         align-items: stretch;
     }
 }

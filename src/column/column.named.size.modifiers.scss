@@ -1,4 +1,4 @@
-.#{$block-name-layout}__column {
+@include root('column') {
     // These named sizes defined in this file are purely a syntactical
     // sugar (in most cases, depending on the settings chosen) to
     // specify a column size, such as a third, three-quaters etc.
@@ -9,110 +9,130 @@
     $flex-two-thirds: 0 0 ($third * 2);
     $flex-half: 0 0 $half;
 
-    @at-root &--quater, &--xs-quater {
+    @include modifier('quater') {
         flex: $flex-quater;
     }
 
-    @at-root &--three-quaters, &--xs-three-quaters {
+    @include modifier('xs-quater') {
+        flex: $flex-quater;
+    }
+
+    @include modifier('three-quaters') {
         flex: $flex-three-quaters;
     }
 
-    @at-root &--third, &--xs-third {
+    @include modifier('xs-three-quaters') {
+        flex: $flex-three-quaters;
+    }
+
+    @include modifier('third') {
         flex: $flex-third;
     }
 
-    @at-root &--two-thirds, &--xs-two-thirds {
+    @include modifier('xs-third') {
+        flex: $flex-third;
+    }
+
+    @include modifier('two-thirds') {
         flex: $flex-two-thirds;
     }
 
-    @at-root &--half, &--xs-half {
+    @include modifier('xs-two-thirds') {
+        flex: $flex-two-thirds;
+    }
+
+    @include modifier('half') {
+        flex: $flex-half;
+    }
+
+    @include modifier('xs-half') {
         flex: $flex-half;
     }
 
     @media (min-width: $viewport-sm) {
-        @at-root &--sm-quater {
+        @include modifier('sm-quater') {
             flex: $flex-quater;
         }
 
-        @at-root &--sm-three-quaters {
+        @include modifier('sm-three-quaters') {
             flex: $flex-three-quaters;
         }
 
-        @at-root &--sm-third {
+        @include modifier('sm-third') {
             flex: $flex-third;
         }
 
-        @at-root &--sm-two-thirds {
+        @include modifier('sm-two-thirds') {
             flex: $flex-two-thirds;
         }
 
-        @at-root &--sm-half {
+        @include modifier('sm-half') {
             flex: $flex-half;
         }
     }
 
     @media (min-width: $viewport-md) {
-        @at-root &--md-quater {
+        @include modifier('md-quater') {
             flex: $flex-quater;
         }
 
-        @at-root &--md-three-quaters {
+        @include modifier('md-three-quaters') {
             flex: $flex-three-quaters;
         }
 
-        @at-root &--md-third {
+        @include modifier('md-third') {
             flex: $flex-third;
         }
 
-        @at-root &--md-two-thirds {
+        @include modifier('md-two-thirds') {
             flex: $flex-two-thirds;
         }
 
-        @at-root &--md-half {
+        @include modifier('md-half') {
             flex: $flex-half;
         }
     }
 
     @media (min-width: $viewport-lg) {
-        @at-root &--lg-quater {
+        @include modifier('lg-quater') {
             flex: $flex-quater;
         }
 
-        @at-root &--lg-three-quaters {
+        @include modifier('lg-three-quaters') {
             flex: $flex-three-quaters;
         }
 
-        @at-root &--lg-third {
+        @include modifier('lg-third') {
             flex: $flex-third;
         }
 
-        @at-root &--lg-two-thirds {
+        @include modifier('lg-two-thirds') {
             flex: $flex-two-thirds;
         }
 
-        @at-root &--lg-half {
+        @include modifier('lg-half') {
             flex: $flex-half;
         }
     }
 
     @media (min-width: $viewport-xl) {
-        @at-root &--xl-quater {
+        @include modifier('xl-quater') {
             flex: $flex-quater;
         }
 
-        @at-root &--xl-three-quaters {
+        @include modifier('xl-three-quaters') {
             flex: $flex-three-quaters;
         }
 
-        @at-root &--xl-third {
+        @include modifier('xl-third') {
             flex: $flex-third;
         }
 
-        @at-root &--xl-two-thirds {
+        @include modifier('xl-two-thirds') {
             flex: $flex-two-thirds;
         }
 
-        @at-root &--xl-half {
+        @include modifier('xl-half') {
             flex: $flex-half;
         }
     }

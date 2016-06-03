@@ -1,15 +1,15 @@
-.#{$block-name-layout}__row {
-    @at-root &--wrap {
+@include root('row') {
+    @include modifier('wrap') {
         flex-wrap: wrap;
     }
 
     // Remove all column gutters from this row.
-    @at-root &--gapless {
-        margin-left: 0;
-        margin-right: 0;
+    @include modifier('gapless') {
+        margin-left: 0px;
+        margin-right: 0px;
 
-        .#{$block-name-layout}__column {
-            padding: 0;
+        @include root('column') {
+            padding: 0px;
         }
     }
 

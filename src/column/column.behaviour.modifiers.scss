@@ -1,11 +1,11 @@
-.#{$block-name-layout}__column {
-    @at-root &--fill-parent {
+@include root('column') {
+    @include modifier('fill-parent') {
         display: flex;
         align-items: stretch;
         flex-direction: column;
     }
 
-    @at-root &--fill-child {
+    @include modifier('fill-child') {
         flex: 1;
     }
 }
