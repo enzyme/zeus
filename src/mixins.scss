@@ -1,0 +1,26 @@
+// Creates the root '.Layout' class with optional sub-element.
+@mixin root($element: '') {
+    @if $element != "" {
+        .#{$block-name-layout}__#{$element} {
+            @content;
+        }
+    } @else {
+        .#{$block-name-layout} {
+            @content;
+        }
+    }
+}
+
+// Create an element under the given root.
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+// Create a modifier under the given root.
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

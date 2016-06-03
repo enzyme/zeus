@@ -1,16 +1,16 @@
-.#{$block-name-layout} {
-    @at-root &--fluid {
+@include root() {
+    @include modifier('fluid') {
         max-width: 100%;
         margin-left: $gutter-width * 2;
         margin-right: $gutter-width * 2;
     }
 
-    @at-root &--hero {
+    @include modifier('hero') {
         height: 100vh;
         align-items: center;
         display: flex;
 
-        .#{$block-name-layout}__row {
+        @include root('row') {
             flex: 1;
         }
     }

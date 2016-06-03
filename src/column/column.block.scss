@@ -1,4 +1,4 @@
-.#{$block-name-layout}__column {
+@include root('column') {
     overflow: hidden;
     padding: $gutter-width;
     padding-bottom: $gutter-width * 2;

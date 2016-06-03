@@ -1,29 +1,29 @@
-.#{$block-name-layout}__column {
-    @at-root &--hidden-xs {
+@include root('column') {
+    @include modifier('hidden-xs') {
         @media (max-width: ($viewport-sm - 1)) {
             display: none !important;
         }
     }
 
-    @at-root &--hidden-sm {
+    @include modifier('hidden-sm') {
         @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
             display: none !important;
         }
     }
 
-    @at-root &--hidden-md {
+    @include modifier('hidden-md') {
         @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
             display: none !important;
         }
     }
 
-    @at-root &--hidden-lg {
+    @include modifier('hidden-lg') {
         @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
             display: none !important;
         }
     }
 
-    @at-root &--hidden-xl {
+    @include modifier('hidden-xl') {
         @media (min-width: $viewport-xl) {
             display: none !important;
         }
