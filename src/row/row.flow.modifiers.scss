@@ -1,0 +1,137 @@
+@include root('row') {
+    @include modifier('flow-row') {
+        flex-direction: row;
+    }
+
+    @include modifier('flow-row-reverse') {
+        flex-direction: row-reverse;
+    }
+
+    @include modifier('xs-flow-row') {
+        @media (max-width: ($viewport-sm - 1)) {
+            flex-direction: row;
+        }
+    }
+
+    @include modifier('xs-flow-row-reverse') {
+        @media (max-width: ($viewport-sm - 1)) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include modifier('sm-flow-row') {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            flex-direction: row;
+        }
+    }
+
+    @include modifier('sm-flow-row-reverse') {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include modifier('md-flow-row') {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            flex-direction: row;
+        }
+    }
+
+    @include modifier('md-flow-row-reverse') {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include modifier('lg-flow-row') {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            flex-direction: row;
+        }
+    }
+
+    @include modifier('lg-flow-row-reverse') {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include modifier('xl-flow-row') {
+        @media (min-width: $viewport-xl) {
+            flex-direction: row;
+        }
+    }
+
+    @include modifier('xl-flow-row-reverse') {
+        @media (min-width: $viewport-xl) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include modifier('flow-column') {
+        flex-direction: column;
+    }
+
+    @include modifier('flow-column-reverse') {
+        flex-direction: column-reverse;
+    }
+
+    @include modifier('xs-flow-column') {
+        @media (max-width: ($viewport-sm - 1)) {
+            flex-direction: column;
+        }
+    }
+
+    @include modifier('xs-flow-column-reverse') {
+        @media (max-width: ($viewport-sm - 1)) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include modifier('sm-flow-column') {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            flex-direction: column;
+        }
+    }
+
+    @include modifier('sm-flow-column-reverse') {
+        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include modifier('md-flow-column') {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            flex-direction: column;
+        }
+    }
+
+    @include modifier('md-flow-column-reverse') {
+        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include modifier('lg-flow-column') {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            flex-direction: column;
+        }
+    }
+
+    @include modifier('lg-flow-column-reverse') {
+        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include modifier('xl-flow-column') {
+        @media (min-width: $viewport-xl) {
+            flex-direction: column;
+        }
+    }
+
+    @include modifier('xl-flow-column-reverse') {
+        @media (min-width: $viewport-xl) {
+            flex-direction: column-reverse;
+        }
+    }
+}
