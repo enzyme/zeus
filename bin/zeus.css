@@ -563,6 +563,10 @@ body {
   .Layout__row--xl-flow-column-reverse {
     flex-direction: column-reverse; } }
 
+.Layout__row--edgeless {
+  margin-left: -1.3rem;
+  margin-right: -1.3rem; }
+
 .Layout__column {
   padding: 0.65rem;
   padding-bottom: 1.3rem;
