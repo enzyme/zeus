@@ -1,30 +1,30 @@
 @include root('column') {
-    @include modifier('hidden-xs') {
-        @media (max-width: ($viewport-sm - 1)) {
+    @include at-viewport-exact('xs') {
+        @include modifier('xs-hidden') {
             display: none !important;
         }
     }
 
-    @include modifier('hidden-sm') {
-        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
+    @include at-viewport-exact('sm') {
+        @include modifier('sm-hidden') {
             display: none !important;
         }
     }
 
-    @include modifier('hidden-md') {
-        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
+    @include at-viewport-exact('md') {
+        @include modifier('md-hidden') {
             display: none !important;
         }
     }
 
-    @include modifier('hidden-lg') {
-        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
+    @include at-viewport-exact('lg') {
+        @include modifier('lg-hidden') {
             display: none !important;
         }
     }
 
-    @include modifier('hidden-xl') {
-        @media (min-width: $viewport-xl) {
+    @include at-viewport-exact('xl') {
+        @include modifier('xl-hidden') {
             display: none !important;
         }
     }

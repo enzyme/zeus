@@ -24,3 +24,54 @@
         @content;
     }
 }
+
+// Create a media query for when the viewport
+// reaches the specified minimum size label.
+@mixin at-viewport-min($size) {
+    $min-width: map-get($viewport-sizes, $size);
+
+    @media (min-width: $min-width) {
+        @content;
+    }
+}
+
+// Create a media query for when the viewport
+// reaches the specified exact size label.
+@mixin at-viewport-exact($size) {
+    @if $size == 'xs' {
+        $max: map-get($viewport-sizes, 'sm');
+
+        @media (max-width: $max - 1) {
+            @content;
+        }
+    } @else if $size == 'sm' {
+        $max: map-get($viewport-sizes, 'md');
+        $min: map-get($viewport-sizes, 'sm');
+
+        @media (max-width: ($max - 1)) and (min-width: $min) {
+            @content;
+        }
+    } @else if $size == 'md' {
+        $max: map-get($viewport-sizes, 'lg');
+        $min: map-get($viewport-sizes, 'md');
+
+        @media (max-width: ($max - 1)) and (min-width: $min) {
+            @content;
+        }
+    } @else if $size == 'lg' {
+        $max: map-get($viewport-sizes, 'xl');
+        $min: map-get($viewport-sizes, 'lg');
+
+        @media (max-width: ($max - 1)) and (min-width: $min) {
+            @content;
+        }
+    } @else if $size == 'xl' {
+        $min: map-get($viewport-sizes, 'xl');
+
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}

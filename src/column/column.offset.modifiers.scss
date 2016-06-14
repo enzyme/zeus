@@ -8,43 +8,49 @@
         @include modifier('offset-#{$i}') {
             margin-left: ($i / $column-count) * 100%;
         }
+    }
 
+    @for $i from 1 through $column-count {
         @include modifier('xs-offset-#{$i}') {
             margin-left: ($i / $column-count) * 100%;
         }
     }
 
     @for $i from 1 through $column-count {
-        // These will apply at mobile/touch viewport sizes.
-        @include modifier('sm-offset-#{$i}') {
-            @media (min-width: $viewport-sm) {
+        $size: 'sm';
+
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
         }
     }
 
     @for $i from 1 through $column-count {
-        // These will apply at tablet viewport sizes.
-        @include modifier('md-offset-#{$i}') {
-            @media (min-width: $viewport-md) {
+        $size: 'md';
+
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
         }
     }
 
     @for $i from 1 through $column-count {
-        // These will apply at desktop viewport sizes.
-        @include modifier('lg-offset-#{$i}') {
-            @media (min-width: $viewport-lg) {
+        $size: 'lg';
+
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
         }
     }
 
     @for $i from 1 through $column-count {
-        // These will apply at large desktop viewport sizes.
-        @include modifier('xl-offset-#{$i}') {
-            @media (min-width: $viewport-xl) {
+        $size: 'xl';
+
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
         }

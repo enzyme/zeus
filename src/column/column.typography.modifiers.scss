@@ -1,137 +1,59 @@
 @include root('column') {
-    @include modifier('text-left') {
-        text-align: left;
-    }
+    $alignments: ('left', 'right', 'center', 'justify');
 
-    @include modifier('text-right') {
-        text-align: right;
-    }
-
-    @include modifier('text-center') {
-        text-align: center;
-    }
-
-    @include modifier('text-justify') {
-        text-align: justify;
-    }
-
-    @include modifier('xs-text-left') {
-        @media (max-width: ($viewport-sm - 1)) {
-            text-align: left !important;
+    @each $alignment in $alignments {
+        @include modifier('text-#{$alignment}') {
+            text-align: unquote($alignment);
         }
     }
 
-    @include modifier('xs-text-right') {
-        @media (max-width: ($viewport-sm - 1)) {
-            text-align: right !important;
+    @each $alignment in $alignments {
+        $size: 'xs';
+
+        @include at-viewport-exact($size) {
+            @include modifier('#{$size}-text-#{$alignment}') {
+                text-align: unquote($alignment) !important;
+            }
         }
     }
 
-    @include modifier('xs-text-center') {
-        @media (max-width: ($viewport-sm - 1)) {
-            text-align: center !important;
+    @each $alignment in $alignments {
+        $size: 'sm';
+
+        @include at-viewport-exact($size) {
+            @include modifier('#{$size}-text-#{$alignment}') {
+                text-align: unquote($alignment) !important;
+            }
         }
     }
 
-    @include modifier('xs-text-justify') {
-        @media (max-width: ($viewport-sm - 1)) {
-            text-align: justify !important;
+    @each $alignment in $alignments {
+        $size: 'md';
+
+        @include at-viewport-exact($size) {
+            @include modifier('#{$size}-text-#{$alignment}') {
+                text-align: unquote($alignment) !important;
+            }
         }
     }
 
-    @include modifier('sm-text-left') {
-        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
-            text-align: left !important;
+    @each $alignment in $alignments {
+        $size: 'lg';
+
+        @include at-viewport-exact($size) {
+            @include modifier('#{$size}-text-#{$alignment}') {
+                text-align: unquote($alignment) !important;
+            }
         }
     }
 
-    @include modifier('sm-text-right') {
-        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
-            text-align: right !important;
-        }
-    }
+    @each $alignment in $alignments {
+        $size: 'xl';
 
-    @include modifier('sm-text-center') {
-        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
-            text-align: center !important;
-        }
-    }
-
-    @include modifier('sm-text-justify') {
-        @media (max-width: ($viewport-md - 1)) and (min-width: $viewport-sm) {
-            text-align: justify !important;
-        }
-    }
-
-    @include modifier('md-text-left') {
-        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
-            text-align: left !important;
-        }
-    }
-
-    @include modifier('md-text-right') {
-        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
-            text-align: right !important;
-        }
-    }
-
-    @include modifier('md-text-center') {
-        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
-            text-align: center !important;
-        }
-    }
-
-    @include modifier('md-text-justify') {
-        @media (max-width: ($viewport-lg - 1)) and (min-width: $viewport-md) {
-            text-align: justify !important;
-        }
-    }
-
-    @include modifier('lg-text-left') {
-        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
-            text-align: left !important;
-        }
-    }
-
-    @include modifier('lg-text-right') {
-        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
-            text-align: right !important;
-        }
-    }
-
-    @include modifier('lg-text-center') {
-        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
-            text-align: center !important;
-        }
-    }
-
-    @include modifier('lg-text-justify') {
-        @media (max-width: ($viewport-xl - 1)) and (min-width: $viewport-lg) {
-            text-align: justify !important;
-        }
-    }
-
-    @include modifier('xl-text-left') {
-        @media (min-width: $viewport-xl) {
-            text-align: left !important;
-        }
-    }
-
-    @include modifier('xl-text-right') {
-        @media (min-width: $viewport-xl) {
-            text-align: right !important;
-        }
-    }
-
-    @include modifier('xl-text-center') {
-        @media (min-width: $viewport-xl) {
-            text-align: center !important;
-        }
-    }
-
-    @include modifier('xl-text-justify') {
-        @media (min-width: $viewport-xl) {
-            text-align: justify !important;
+        @include at-viewport-exact($size) {
+            @include modifier('#{$size}-text-#{$alignment}') {
+                text-align: unquote($alignment) !important;
+            }
         }
     }
 }

@@ -2,17 +2,15 @@ $container-width: 75rem !default;
 $gutter-width: 0.65rem !default;
 $column-count: 12 !default;
 $lc-blocks: false !default;
+$viewport-sizes: (
+    xs: 0px,
+    sm: 544px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+) !default;
 
 $block-name-layout: 'Layout';
 @if $lc-blocks {
     $block-name-layout: 'layout';
 }
-
-$viewport-sm: 544px;
-$viewport-md: 768px;
-$viewport-lg: 992px;
-$viewport-xl: 1200px;
-
-$quater: (100 / 4) + 0%;
-$half: (100 / 2) + 0%;
-$third: (100 / 3) + 0%;

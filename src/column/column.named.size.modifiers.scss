@@ -3,137 +3,73 @@
     // sugar (in most cases, depending on the settings chosen) to
     // specify a column size, such as a third, three-quaters etc.
 
-    $flex-quater: 0 0 $quater;
-    $flex-three-quaters: 0 0 ($quater * 3);
-    $flex-third: 0 0 $third;
-    $flex-two-thirds: 0 0 ($third * 2);
-    $flex-half: 0 0 $half;
+    $quater: (100 / 4) + 0%;
+    $half: (100 / 2) + 0%;
+    $third: (100 / 3) + 0%;
+    $percentages: (
+        'one-quater': $quater,
+        'quater': $quater,
+        'three-quaters': ($quater * 3),
+        'one-third': $third,
+        'third': $third,
+        'two-thirds': ($third * 2),
+        'one-half': $half,
+        'half': $half,
+    );
 
-    @include modifier('quater') {
-        flex: $flex-quater;
-    }
-
-    @include modifier('xs-quater') {
-        flex: $flex-quater;
-    }
-
-    @include modifier('three-quaters') {
-        flex: $flex-three-quaters;
-    }
-
-    @include modifier('xs-three-quaters') {
-        flex: $flex-three-quaters;
-    }
-
-    @include modifier('third') {
-        flex: $flex-third;
-    }
-
-    @include modifier('xs-third') {
-        flex: $flex-third;
-    }
-
-    @include modifier('two-thirds') {
-        flex: $flex-two-thirds;
-    }
-
-    @include modifier('xs-two-thirds') {
-        flex: $flex-two-thirds;
-    }
-
-    @include modifier('half') {
-        flex: $flex-half;
-    }
-
-    @include modifier('xs-half') {
-        flex: $flex-half;
-    }
-
-    @media (min-width: $viewport-sm) {
-        @include modifier('sm-quater') {
-            flex: $flex-quater;
-        }
-
-        @include modifier('sm-three-quaters') {
-            flex: $flex-three-quaters;
-        }
-
-        @include modifier('sm-third') {
-            flex: $flex-third;
-        }
-
-        @include modifier('sm-two-thirds') {
-            flex: $flex-two-thirds;
-        }
-
-        @include modifier('sm-half') {
-            flex: $flex-half;
+    @each $label, $percentage in $percentages {
+        @include modifier($label) {
+            flex: 0 0 $percentage;
         }
     }
 
-    @media (min-width: $viewport-md) {
-        @include modifier('md-quater') {
-            flex: $flex-quater;
-        }
+    @each $label, $percentage in $percentages {
+        $size: 'xs';
 
-        @include modifier('md-three-quaters') {
-            flex: $flex-three-quaters;
-        }
-
-        @include modifier('md-third') {
-            flex: $flex-third;
-        }
-
-        @include modifier('md-two-thirds') {
-            flex: $flex-two-thirds;
-        }
-
-        @include modifier('md-half') {
-            flex: $flex-half;
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-#{$label}') {
+                flex: 0 0 $percentage;
+            }
         }
     }
 
-    @media (min-width: $viewport-lg) {
-        @include modifier('lg-quater') {
-            flex: $flex-quater;
-        }
+    @each $label, $percentage in $percentages {
+        $size: 'sm';
 
-        @include modifier('lg-three-quaters') {
-            flex: $flex-three-quaters;
-        }
-
-        @include modifier('lg-third') {
-            flex: $flex-third;
-        }
-
-        @include modifier('lg-two-thirds') {
-            flex: $flex-two-thirds;
-        }
-
-        @include modifier('lg-half') {
-            flex: $flex-half;
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-#{$label}') {
+                flex: 0 0 $percentage;
+            }
         }
     }
 
-    @media (min-width: $viewport-xl) {
-        @include modifier('xl-quater') {
-            flex: $flex-quater;
-        }
+    @each $label, $percentage in $percentages {
+        $size: 'md';
 
-        @include modifier('xl-three-quaters') {
-            flex: $flex-three-quaters;
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-#{$label}') {
+                flex: 0 0 $percentage;
+            }
         }
+    }
 
-        @include modifier('xl-third') {
-            flex: $flex-third;
+    @each $label, $percentage in $percentages {
+        $size: 'lg';
+
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-#{$label}') {
+                flex: 0 0 $percentage;
+            }
         }
+    }
 
-        @include modifier('xl-two-thirds') {
-            flex: $flex-two-thirds;
-        }
+    @each $label, $percentage in $percentages {
+        $size: 'xl';
 
-        @include modifier('xl-half') {
-            flex: $flex-half;
+        @include at-viewport-min($size) {
+            @include modifier('#{$size}-#{$label}') {
+                flex: 0 0 $percentage;
+            }
         }
     }
 }
