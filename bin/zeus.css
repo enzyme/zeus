@@ -567,6 +567,31 @@ body {
   margin-left: -1.3rem;
   margin-right: -1.3rem; }
 
+@media (max-width: 543px) {
+  .Layout__row--xs-edgeless {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__row--sm-edgeless {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__row--md-edgeless {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__row--lg-edgeless {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem; } }
+
+@media (min-width: 1200px) {
+  .Layout__row--xl-edgeless {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem; } }
+
 .Layout__column {
   padding: 0.65rem;
   padding-bottom: 1.3rem;
