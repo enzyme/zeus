@@ -1,4 +1,3 @@
-// Creates the root '.Layout' class with optional sub-element.
 @mixin root($element: '') {
     @if $element != "" {
         .#{$block-name-layout}__#{$element} {
@@ -11,21 +10,18 @@
     }
 }
 
-// Create an element under the given root.
 @mixin element($element) {
     &__#{$element} {
         @content;
     }
 }
 
-// Create a modifier under the given root.
 @mixin modifier($modifier) {
     &--#{$modifier} {
         @content;
     }
 }
 
-// Create a utility class.
 @mixin utility($name) {
     @at-root {
         .util-zeus-#{$name} {
@@ -34,19 +30,23 @@
     }
 }
 
-// Create a media query for when the viewport
-// reaches the specified minimum size label.
-@mixin at-viewport-min($size) {
-    $min-width: map-get($viewport-sizes, $size);
+@mixin viewport-min($size) {
+    $min: map-get($viewport-sizes, $size);
 
-    @media (min-width: $min-width) {
+    @media (min-width: $min) {
         @content;
     }
 }
 
-// Create a media query for when the viewport
-// reaches the specified exact size label.
-@mixin at-viewport-exact($size) {
+@mixin viewport-under($size) {
+    $max: map-get($viewport-sizes, $size);
+
+    @media (max-width: $max - 1) {
+        @content;
+    }
+}
+
+@mixin viewport-exact($size) {
     @if $size == 'xs' {
         $max: map-get($viewport-sizes, 'sm');
 

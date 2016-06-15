@@ -1161,6 +1161,18 @@ body {
   .Layout__column--xl-hidden {
     display: none !important; } }
 
+@media (max-width: 767px) {
+  .Layout__column--sm-hidden-down {
+    display: none !important; } }
+
+@media (max-width: 991px) {
+  .Layout__column--md-hidden-down {
+    display: none !important; } }
+
+@media (max-width: 1199px) {
+  .Layout__column--lg-hidden-down {
+    display: none !important; } }
+
 .Layout__column--offset-1 {
   margin-left: 8.33333%; }
 

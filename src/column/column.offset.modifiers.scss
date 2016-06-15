@@ -19,7 +19,7 @@
     @for $i from 1 through $column-count {
         $size: 'sm';
 
-        @include at-viewport-min($size) {
+        @include viewport-min($size) {
             @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
@@ -29,7 +29,7 @@
     @for $i from 1 through $column-count {
         $size: 'md';
 
-        @include at-viewport-min($size) {
+        @include viewport-min($size) {
             @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
@@ -39,7 +39,7 @@
     @for $i from 1 through $column-count {
         $size: 'lg';
 
-        @include at-viewport-min($size) {
+        @include viewport-min($size) {
             @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }
@@ -49,7 +49,7 @@
     @for $i from 1 through $column-count {
         $size: 'xl';
 
-        @include at-viewport-min($size) {
+        @include viewport-min($size) {
             @include modifier('#{$size}-offset-#{$i}') {
                 margin-left: ($i / $column-count) * 100%;
             }

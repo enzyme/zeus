@@ -10,7 +10,7 @@
     @each $alignment in $alignments {
         $size: 'xs';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-text-#{$alignment}') {
                 text-align: unquote($alignment) !important;
             }
@@ -20,7 +20,7 @@
     @each $alignment in $alignments {
         $size: 'sm';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-text-#{$alignment}') {
                 text-align: unquote($alignment) !important;
             }
@@ -30,7 +30,7 @@
     @each $alignment in $alignments {
         $size: 'md';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-text-#{$alignment}') {
                 text-align: unquote($alignment) !important;
             }
@@ -40,7 +40,7 @@
     @each $alignment in $alignments {
         $size: 'lg';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-text-#{$alignment}') {
                 text-align: unquote($alignment) !important;
             }
@@ -50,7 +50,7 @@
     @each $alignment in $alignments {
         $size: 'xl';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-text-#{$alignment}') {
                 text-align: unquote($alignment) !important;
             }
