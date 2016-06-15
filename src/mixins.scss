@@ -25,6 +25,15 @@
     }
 }
 
+// Create a utility class.
+@mixin utility($name) {
+    @at-root {
+        .util-zeus-#{$name} {
+            @content;
+        }
+    }
+}
+
 // Create a media query for when the viewport
 // reaches the specified minimum size label.
 @mixin at-viewport-min($size) {
