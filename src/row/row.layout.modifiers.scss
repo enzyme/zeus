@@ -4,35 +4,35 @@
         margin-right: -($gutter-width * 2);
     }
 
-    @include at-viewport-exact('xs') {
+    @include viewport-exact('xs') {
         @include modifier('xs-edgeless') {
             margin-left: -($gutter-width * 2);
             margin-right: -($gutter-width * 2);
         }
     }
 
-    @include at-viewport-exact('sm') {
+    @include viewport-exact('sm') {
         @include modifier('sm-edgeless') {
             margin-left: -($gutter-width * 2);
             margin-right: -($gutter-width * 2);
         }
     }
 
-    @include at-viewport-exact('md') {
+    @include viewport-exact('md') {
         @include modifier('md-edgeless') {
             margin-left: -($gutter-width * 2);
             margin-right: -($gutter-width * 2);
         }
     }
 
-    @include at-viewport-exact('lg') {
+    @include viewport-exact('lg') {
         @include modifier('lg-edgeless') {
             margin-left: -($gutter-width * 2);
             margin-right: -($gutter-width * 2);
         }
     }
 
-    @include at-viewport-exact('xl') {
+    @include viewport-exact('xl') {
         @include modifier('xl-edgeless') {
             margin-left: -($gutter-width * 2);
             margin-right: -($gutter-width * 2);

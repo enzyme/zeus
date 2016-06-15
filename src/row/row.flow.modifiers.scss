@@ -10,7 +10,7 @@
     @each $flow in $flows {
         $size: 'xs';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-flow-#{$flow}') {
                 flex-direction: unquote($flow);
             }
@@ -20,7 +20,7 @@
     @each $flow in $flows {
         $size: 'sm';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-flow-#{$flow}') {
                 flex-direction: unquote($flow);
             }
@@ -30,7 +30,7 @@
     @each $flow in $flows {
         $size: 'md';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-flow-#{$flow}') {
                 flex-direction: unquote($flow);
             }
@@ -40,7 +40,7 @@
     @each $flow in $flows {
         $size: 'lg';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-flow-#{$flow}') {
                 flex-direction: unquote($flow);
             }
@@ -50,7 +50,7 @@
     @each $flow in $flows {
         $size: 'xl';
 
-        @include at-viewport-exact($size) {
+        @include viewport-exact($size) {
             @include modifier('#{$size}-flow-#{$flow}') {
                 flex-direction: unquote($flow);
             }
