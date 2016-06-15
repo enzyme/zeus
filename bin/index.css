@@ -253,6 +253,18 @@
     margin-bottom: 0.5rem; }
     .ClassMap__meta::before {
       content: "✪ "; }
+  .ClassMap__viewport-placeholder {
+    background: #df5195;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin: 0 2px; }
+  .ClassMap__viewport-size {
+    background: #5197df;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin: 0 2px; }
 
 .Table {
   width: 100%; }

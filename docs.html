@@ -143,11 +143,11 @@
                         <li class="ClassMap__child">--valign-center</li>
                         <li class="ClassMap__child">--valign-baseline</li>
                         <li class="ClassMap__child">--valign-stretch</li>
-                        <li class="ClassMap__child">--[%-]flow-row</li>
-                        <li class="ClassMap__child">--[%-]flow-row-reverse</li>
-                        <li class="ClassMap__child">--[%-]flow-column</li>
-                        <li class="ClassMap__child">--[%-]flow-column-reverse</li>
-                        <li class="ClassMap__meta">[%-] is the optional viewport size, xs-, sm-, md-, lg- or xl-.</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>flow-row</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>flow-row-reverse</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>flow-column</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>flow-column-reverse</li>
+                        <li class="ClassMap__meta">Replace <span class="ClassMap__viewport-placeholder">%</span> with the optional viewport sizes <span class="ClassMap__viewport-placeholder">xs-</span>, <span class="ClassMap__viewport-placeholder">sm-</span>, <span class="ClassMap__viewport-placeholder">md-</span>, <span class="ClassMap__viewport-placeholder">lg-</span> or <span class="ClassMap__viewport-placeholder">xl-</span>.</li>
                     </ul>
                     <p class="Paragraph">Rows are exactly what you'd expect. The two most important modifiers you'll likely use are <code class="Code">Layout__row--gapless</code> which creates rows that contain columns without gutters, and <code class="Code">Layout__row--wrap</code> which allows rows to contain more columns that they'd naturally fit horizontally.</p>
                     <p class="Paragraph Paragraph--no-bottom">An example of a standard row with 3 columns.</p>
@@ -196,23 +196,24 @@
                     <h1 id="column" class="Heading Heading--h1">Column</h1>
                     <ul class="ClassMap">
                         <li class="ClassMap__parent">Layout__column</li>
-                        <li class="ClassMap__child">--[%-]#</li>
-                        <li class="ClassMap__child">--[%-]offset-#</li>
-                        <li class="ClassMap__child">--[%-]quater</li>
-                        <li class="ClassMap__child">--[%-]three-quaters</li>
-                        <li class="ClassMap__child">--[%-]third</li>
-                        <li class="ClassMap__child">--[%-]two-thirds</li>
-                        <li class="ClassMap__child">--[%-]half</li>
-                        <li class="ClassMap__child">--[%-]text-left</li>
-                        <li class="ClassMap__child">--[%-]text-right</li>
-                        <li class="ClassMap__child">--[%-]text-center</li>
-                        <li class="ClassMap__child">--[%-]text-justify</li>
-                        <li class="ClassMap__meta">[%-] is the optional viewport size, xs-, sm-, md-, lg- or xl-.</li>
-                        <li class="ClassMap__meta"># is the column size, eg: 1, 2, 6, 12.</li>
-                        <li class="ClassMap__child">--hidden-%</li>
-                        <li class="ClassMap__meta">% is the viewport size, xs, sm, md, lg or xl.</li>
-                        <li class="ClassMap__child">--fill-parent</li>
-                        <li class="ClassMap__child">--fill-child</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span><span class="ClassMap__viewport-size">#</span></li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>offset-<span class="ClassMap__viewport-size">#</span></li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>quater</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>one-quater</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>three-quaters</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>third</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>one-third</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>two-thirds</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>half</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>one-half</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>text-left</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>text-right</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>text-center</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>text-justify</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>hidden</li>
+                        <li class="ClassMap__child">--<span class="ClassMap__viewport-placeholder">%</span>hidden-down</li>
+                        <li class="ClassMap__meta">Replace <span class="ClassMap__viewport-placeholder">%</span> with the optional viewport sizes, <span class="ClassMap__viewport-placeholder">xs-</span>, <span class="ClassMap__viewport-placeholder">sm-</span>, <span class="ClassMap__viewport-placeholder">md-</span>, <span class="ClassMap__viewport-placeholder">lg-</span> or <span class="ClassMap__viewport-placeholder">xl-</span>.</li>
+                        <li class="ClassMap__meta">Replace <span class="ClassMap__viewport-size">#</span> with the column size, eg: <span class="ClassMap__viewport-size">1</span>, <span class="ClassMap__viewport-size">3</span>, <span class="ClassMap__viewport-size">6</span>, <span class="ClassMap__viewport-size">12</span> etc.</li>
                     </ul>
                     <p class="Paragraph Paragraph--no-bottom">Columns are where all the fun happens. We already have an example of a basic column setup in the row documentation above, so let's try something a bit more interesting. First of all, because all columns are built upon <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="Link" target="_blank">flexbox</a>, we can add as many generic columns as we want, and they'll just fit themselves! Try it out...</p>
                 </div>

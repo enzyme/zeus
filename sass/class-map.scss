@@ -24,4 +24,20 @@
             content: "✪ "
         }
     }
+
+    @at-root &__viewport-placeholder {
+        background: rgb(223, 81, 149);
+        color: white;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin: 0 2px;
+    }
+
+    @at-root &__viewport-size {
+        background: rgb(81, 151, 223);
+        color: white;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin: 0 2px;
+    }
 }
