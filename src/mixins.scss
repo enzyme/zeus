@@ -38,6 +38,13 @@
     }
 }
 
+@mixin viewport-under($size) {
+    $max: map-get($viewport-sizes, $size);
+
+    @media (max-width: $max - 1) {
+        @content;
+    }
+}
 
 @mixin viewport-exact($size) {
     @if $size == 'xs' {

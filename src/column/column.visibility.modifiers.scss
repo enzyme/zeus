@@ -28,4 +28,22 @@
             display: none !important;
         }
     }
+
+    @include viewport-under('md') {
+        @include modifier('sm-hidden-down') {
+            display: none !important;
+        }
+    }
+
+    @include viewport-under('lg') {
+        @include modifier('md-hidden-down') {
+            display: none !important;
+        }
+    }
+
+    @include viewport-under('xl') {
+        @include modifier('lg-hidden-down') {
+            display: none !important;
+        }
+    }
 }
