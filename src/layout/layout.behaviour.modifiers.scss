@@ -17,6 +17,7 @@
 
     @include modifier('edgeless') {
         padding: 0rem;
+        overflow: hidden;
     }
 
     @each $size in 'xs', 'sm', 'md', 'lg', 'xl' {
