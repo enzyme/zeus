@@ -24,6 +24,7 @@
         @include viewport-exact($size) {
             @include modifier('#{$size}-edgeless') {
                 padding: 0rem;
+                overflow: hidden;
             }
         }
     }
@@ -31,18 +32,21 @@
     @include viewport-under('sm') {
         @include modifier('sm-edgeless-down') {
             padding: 0rem;
+            overflow: hidden;
         }
     }
 
     @include viewport-under('md') {
         @include modifier('md-edgeless-down') {
             padding: 0rem;
+            overflow: hidden;
         }
     }
 
     @include viewport-under('lg') {
         @include modifier('lg-edgeless-down') {
             padding: 0rem;
+            overflow: hidden;
         }
     }
 }
