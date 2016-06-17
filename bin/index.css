@@ -207,7 +207,7 @@
 
 .Navigation {
   background-color: #FFEB3B;
-  padding: 1rem 0rem;
+  padding: 1rem;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -223,11 +223,12 @@
     padding: 0;
     list-style-type: none;
     display: inline-block; }
+    .Navigation__item + .Navigation__item {
+      margin-left: 0.8rem; }
   .Navigation__link {
     font-weight: 700;
     text-decoration: none;
-    color: black;
-    margin-left: 0.8rem; }
+    color: black; }
 
 .DocBody {
   padding-top: 6rem; }

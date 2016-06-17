@@ -8,3 +8,5 @@ gulp.task('build', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./bin'));
 });
+
+gulp.task('default', ['build']);
