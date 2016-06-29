@@ -1,0 +1,76 @@
+@include root('column') {
+    @include modifier('edgeless') {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include viewport-min('xs') {
+        @include modifier('xs-edgeless-up') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-exact('xs') {
+        @include modifier('xs-edgeless') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-min('sm') {
+        @include modifier('sm-edgeless-up') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-exact('sm') {
+        @include modifier('sm-edgeless') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-min('md') {
+        @include modifier('md-edgeless-up') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-exact('md') {
+        @include modifier('md-edgeless') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-min('lg') {
+        @include modifier('lg-edgeless-up') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-exact('lg') {
+        @include modifier('lg-edgeless') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-min('xl') {
+        @include modifier('xl-edgeless-up') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    @include viewport-exact('xl') {
+        @include modifier('xl-edgeless') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
