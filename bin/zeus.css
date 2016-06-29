@@ -1692,6 +1692,60 @@ body {
   .Layout__column--xl-offset-12 {
     margin-left: 100%; } }
 
+.Layout__column--edgeless {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+@media (min-width: 0px) {
+  .Layout__column--xs-edgeless-up {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (max-width: 543px) {
+  .Layout__column--xs-edgeless {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 544px) {
+  .Layout__column--sm-edgeless-up {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .Layout__column--sm-edgeless {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 768px) {
+  .Layout__column--md-edgeless-up {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Layout__column--md-edgeless {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 992px) {
+  .Layout__column--lg-edgeless-up {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .Layout__column--lg-edgeless {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-edgeless-up {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 1200px) {
+  .Layout__column--xl-edgeless {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
 .util-zeus-fill-parent {
   display: flex;
   align-items: stretch;
