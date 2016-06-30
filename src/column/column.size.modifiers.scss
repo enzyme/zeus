@@ -17,10 +17,30 @@
     }
 
     @for $i from 1 through $column-count {
+        $size: 'xs';
+
+        @include viewport-exact($size) {
+            @include modifier('#{$size}-#{$i}-only') {
+                flex: 0 0 (($i / $column-count) * 100%);
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
         $size: 'sm';
 
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$i}') {
+                flex: 0 0 (($i / $column-count) * 100%);
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        $size: 'sm';
+
+        @include viewport-exact($size) {
+            @include modifier('#{$size}-#{$i}-only') {
                 flex: 0 0 (($i / $column-count) * 100%);
             }
         }
@@ -37,7 +57,37 @@
     }
 
     @for $i from 1 through $column-count {
+        $size: 'md';
+
+        @include viewport-exact($size) {
+            @include modifier('#{$size}-#{$i}-only') {
+                flex: 0 0 (($i / $column-count) * 100%);
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
         $size: 'lg';
+
+        @include viewport-min($size) {
+            @include modifier('#{$size}-#{$i}') {
+                flex: 0 0 (($i / $column-count) * 100%);
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        $size: 'lg';
+
+        @include viewport-exact($size) {
+            @include modifier('#{$size}-#{$i}-only') {
+                flex: 0 0 (($i / $column-count) * 100%);
+            }
+        }
+    }
+
+    @for $i from 1 through $column-count {
+        $size: 'xl';
 
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$i}') {
@@ -49,8 +99,8 @@
     @for $i from 1 through $column-count {
         $size: 'xl';
 
-        @include viewport-min($size) {
-            @include modifier('#{$size}-#{$i}') {
+        @include viewport-exact($size) {
+            @include modifier('#{$size}-#{$i}-only') {
                 flex: 0 0 (($i / $column-count) * 100%);
             }
         }
