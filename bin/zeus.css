@@ -442,6 +442,9 @@ body {
   padding: 0rem;
   overflow: hidden; }
 
+.Layout--breakaway {
+  margin-bottom: 1.3rem; }
+
 @media (max-width: 543px) {
   .Layout--xs-edgeless {
     padding: 0rem;
