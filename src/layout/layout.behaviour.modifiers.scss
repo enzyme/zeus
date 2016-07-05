@@ -20,6 +20,10 @@
         overflow: hidden;
     }
 
+    @include modifier('breakaway') {
+        margin-bottom: $gutter-width * 2;
+    }
+
     @each $size in 'xs', 'sm', 'md', 'lg', 'xl' {
         @include viewport-exact($size) {
             @include modifier('#{$size}-edgeless') {
