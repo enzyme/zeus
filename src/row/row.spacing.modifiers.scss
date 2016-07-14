@@ -18,6 +18,12 @@
         margin-bottom: -$gutter-width * 2;
     }
 
+    @include modifier('bottomless-columns') {
+        @include root('column') {
+            padding-bottom: 0px;
+        }
+    }
+
     @include viewport-exact('xs') {
         @include modifier('xs-bottomless-columns') {
             @include root('column') {
