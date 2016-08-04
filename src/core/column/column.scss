@@ -1,0 +1,45 @@
+@import 'reusables.scss';
+
+@include column() {
+    flex: 1;
+    padding-bottom: $gutter-width;
+    padding-left: $half-gutter-width;
+    padding-right: $half-gutter-width;
+    padding-top: 0rem;
+
+    // Generate base columns.
+    @for $i from 1 through $column-count {
+        &--#{$i} {
+            @include column-flex-width($i, $column-count);
+        }
+    }
+
+    // Generate viewport-dependent columns.
+    @each $label, $width in $viewport-min-widths {
+        @for $i from 1 through $column-count {
+            @include viewport-min($label) {
+                &--#{$label}-#{$i} {
+                    @include column-flex-width($i, $column-count);
+                }
+            }
+        }
+    }
+
+    // Generate base column offsets.
+    @for $i from 1 through $column-count {
+        &--offset-#{$i} {
+            @include column-offset($i, $column-count);
+        }
+    }
+
+    // Generate viewport-dependent column offsets.
+    @each $label, $width in $viewport-min-widths {
+        @for $i from 1 through $column-count {
+            @include viewport-min($label) {
+                &--#{$label}-offset-#{$i} {
+                    @include column-offset($i, $column-count);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin column-flex-width($i, $column-count) {
+    flex: 0 0 (($i / $column-count) * 100%);
+}
+
+@mixin column-offset($i, $column-count) {
+    margin-left: ($i / $column-count) * 100%;
+}

@@ -1,0 +1,37 @@
+@mixin layout() {
+    .#{$layout_identifier} {
+        @content;
+    }
+}
+
+@mixin row() {
+    .#{$row_identifier} {
+        @content;
+    }
+}
+
+@mixin column() {
+    .#{$column_identifier} {
+        @content;
+    }
+}
+
+@mixin viewport-min($size) {
+    $min: map-get($viewport-min-widths, $size);
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin viewport-only($size) {
+    //
+}
+
+@mixin viewport-down($size) {
+    $min: map-get($viewport-min-widths, $size);
+
+    @media (max-width: $min - 1) {
+        @content;
+    }
+}
