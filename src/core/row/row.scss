@@ -9,35 +9,53 @@
 
     //
     // -------------------------------------------------------------------------
-    // Gutters.
+    // Column gutters.
     // -------------------------------------------------------------------------
     //
 
     &--gutters {
-        margin-bottom: -$gutter-width;
         padding-left: 0rem;
         padding-right: 0rem;
 
         .#{$COLUMN} {
-            padding-bottom: $gutter-width;
-            padding-left: $half-gutter-width;
-            padding-right: $half-gutter-width;
-            padding-top: 0rem;
+            padding: 0rem $half-gutter-width;
         }
     }
 
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
             &--#{$label}-gutters {
-                margin-bottom: -$gutter-width;
                 padding-left: 0rem;
                 padding-right: 0rem;
 
                 .#{$COLUMN} {
+                    padding: 0rem $half-gutter-width;
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Column bottoms.
+    // -------------------------------------------------------------------------
+    //
+
+    &--bottoms {
+        margin-bottom: -$gutter-width;
+
+        .#{$COLUMN} {
+            padding-bottom: $gutter-width;
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            &--#{$label}-bottoms {
+                margin-bottom: -$gutter-width;
+
+                .#{$COLUMN} {
                     padding-bottom: $gutter-width;
-                    padding-left: $half-gutter-width;
-                    padding-right: $half-gutter-width;
-                    padding-top: 0rem;
                 }
             }
         }
@@ -61,13 +79,13 @@
         }
     }
 
-    &--gutters.#{$ROW}--breaks {
+    &--bottoms.#{$ROW}--breaks {
         margin-bottom: 0;
     }
 
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
-            &--#{$label}-gutters.#{$ROW}--#{$label}-breaks {
+            &--#{$label}-bottoms.#{$ROW}--#{$label}-breaks {
                 margin-bottom: 0;
             }
         }
