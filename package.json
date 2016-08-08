@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/enzyme/zeus#readme",
   "dependencies": {
+    "autoprefixer": "^6.4.0",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
+    "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-strip-css-comments": "^1.2.0",
