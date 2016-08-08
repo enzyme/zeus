@@ -20,6 +20,18 @@
         }
     }
 
+    &--hidden {
+        display: none;
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            &--#{$label}-hidden {
+                display: none;
+            }
+        }
+    }
+
     //
     // -------------------------------------------------------------------------
     // Column sizing.
