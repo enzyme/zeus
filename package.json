@@ -1,6 +1,6 @@
 {
   "name": "zeus-grid",
-  "version": "6.7.0",
+  "version": "6.8.0",
   "description": "A BEM flavoured, mobile first flexbox grid framework.",
   "repository": {
     "type": "git",
