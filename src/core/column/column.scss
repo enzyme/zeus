@@ -12,20 +12,16 @@
         display: block;
     }
 
-    @each $label, $width in $viewport-min-widths {
-        @include viewport-min($label) {
-            &--#{$label}-visible {
-                display: block;
-            }
-        }
-    }
-
     &--hidden {
         display: none;
     }
 
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
+            &--#{$label}-visible {
+                display: block;
+            }
+
             &--#{$label}-hidden {
                 display: none;
             }
