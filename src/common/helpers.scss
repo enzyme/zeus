@@ -5,3 +5,9 @@
         @content;
     }
 }
+
+@mixin flex-width($percent) {
+    flex: 0 0 $percent;
+    width: $percent;
+    max-width: $percent;
+}

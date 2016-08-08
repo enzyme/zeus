@@ -36,7 +36,7 @@
 
     @for $i from 1 through $column-count {
         &--#{$i} {
-            flex: 0 0 (($i / $column-count) * 100%);
+            @include flex-width(($i / $column-count) * 100%);
         }
     }
 
@@ -44,9 +44,7 @@
         @for $i from 1 through $column-count {
             @include viewport-min($label) {
                 &--#{$label}-#{$i} {
-                    flex: 0 0 (($i / $column-count) * 100%);
-                    width: (($i / $column-count) * 100%);
-                    max-width: (($i / $column-count) * 100%);
+                    @include flex-width(($i / $column-count) * 100%);
                 }
             }
         }
@@ -68,9 +66,7 @@
 
     @each $name, $size in $named-sizes {
         &--#{$name} {
-            flex: 0 0 $size;
-            width: $size;
-            max-width: $size;
+            @include flex-width($size);
         }
     }
 
@@ -78,9 +74,7 @@
         @include viewport-min($label) {
             @each $name, $size in $named-sizes {
                 &--#{$label}-#{$name} {
-                    flex: 0 0 $size;
-                    width: $size;
-                    max-width: $size;
+                    @include flex-width($size);
                 }
             }
         }
