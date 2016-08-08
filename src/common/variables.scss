@@ -1,7 +1,6 @@
 $layout_identifier: 'Layout' !default;
-$row_identifier: 'Row' !default;
-$column_identifier: 'Column' !default;
-
+$row_identifier: 'row' !default;
+$column_identifier: 'column' !default;
 $layout_max_width: 75rem !default;
 $column-count: 12 !default;
 $gutter-width: 2rem !default;
@@ -15,3 +14,6 @@ $viewport-min-widths: (
 ) !default;
 
 $half-gutter-width: $gutter-width / 2;
+$LAYOUT: #{$layout_identifier};
+$ROW: #{$layout_identifier}__#{$row_identifier};
+$COLUMN: #{$layout_identifier}__#{$column_identifier};

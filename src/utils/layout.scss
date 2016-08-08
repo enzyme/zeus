@@ -1,9 +1,0 @@
-@include utility('fill-parent') {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-}
-
-@include utility('fill-child') {
-    flex: 1;
-}

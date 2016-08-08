@@ -1,8 +1,0 @@
-@mixin layout-edgeless() {
-    overflow: hidden;
-
-    @include row() {
-        margin-left: -$half-gutter-width;
-        margin-right: -$half-gutter-width;
-    }
-}

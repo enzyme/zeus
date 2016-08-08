@@ -1,24 +1,50 @@
-@import 'reusables.scss';
-
-@include layout() {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+.#{$LAYOUT} {
     max-width: $layout_max_width;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    overflow: hidden;
 
-    &--fluid {
-        margin: 0;
-        max-width: none;
-    }
+    /*
+     * -------------------------------------------------------------------------
+     * Edges.
+     * -------------------------------------------------------------------------
+     */
+    &--edges {
+        overflow: auto;
 
-    &--edgeless {
-        @include layout-edgeless;
+        .#{$ROW} {
+            margin-left: 0rem;
+            margin-right: 0rem;
+        }
     }
 
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
-            &--#{$label}-edgeless {
-                @include layout-edgeless;
+            &--#{$label}-edges {
+                overflow: auto;
+
+                .#{$ROW} {
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                }
+            }
+        }
+    }
+
+    /*
+     * -------------------------------------------------------------------------
+     * Breakaways.
+     * -------------------------------------------------------------------------
+     */
+    &--breakaway {
+        margin-bottom: $gutter-width;
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            &--#{$label}-breakaway {
+                margin-bottom: $gutter-width;
             }
         }
     }

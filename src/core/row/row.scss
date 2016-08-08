@@ -1,69 +1,95 @@
-@import 'reusables.scss';
-
-@include row() {
+.#{$ROW} {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
+    margin-left: -$half-gutter-width;
+    margin-right: -$half-gutter-width;
+    padding-left: $half-gutter-width;
+    padding-right: $half-gutter-width;
 
-    &--bottomless {
-        @include row-bottomless;
+    /*
+     * -------------------------------------------------------------------------
+     * Gutters.
+     * -------------------------------------------------------------------------
+     */
+    &--gutters {
+        margin-bottom: -$gutter-width;
+        padding-left: 0rem;
+        padding-right: 0rem;
+
+        .#{$COLUMN} {
+            padding-bottom: $gutter-width;
+            padding-left: $half-gutter-width;
+            padding-right: $half-gutter-width;
+            padding-top: 0rem;
+        }
     }
 
-    &--gutterless {
-        @include row-gutterless;
-    }
-
-    // Generate bottomless modifiers for each viewport size.
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
-            &--#{$label}-bottomless {
-                @include row-bottomless;
+            &--#{$label}-gutters {
+                margin-bottom: -$gutter-width;
+                padding-left: 0rem;
+                padding-right: 0rem;
+
+                .#{$COLUMN} {
+                    padding-bottom: $gutter-width;
+                    padding-left: $half-gutter-width;
+                    padding-right: $half-gutter-width;
+                    padding-top: 0rem;
+                }
             }
         }
     }
 
-    // Generate bottomless-down modifiers for each viewport size.
-    @each $label, $width in $viewport-min-widths {
-        @include viewport-down($label) {
-            &--#{$label}-bottomless-down {
-                @include row-bottomless;
-            }
-        }
+    /*
+     * -------------------------------------------------------------------------
+     * Breaks.
+     * -------------------------------------------------------------------------
+     */
+    &--breaks {
+        margin-bottom: $gutter-width;
     }
 
-    // Generate bottomless-only modifiers for each viewport size.
-    @each $label, $width in $viewport-min-widths {
-        @include viewport-only($label) {
-            &--#{$label}-bottomless-only {
-                @include row-bottomless;
-            }
-        }
-    }
-
-    // Generate gutterless modifiers for each viewport size.
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
-            &--#{$label}-gutterless {
-                @include row-gutterless;
+            &--#{$label}-breaks {
+                margin-bottom: $gutter-width;
             }
         }
     }
 
-    // Generate gutterless-down modifiers for each viewport size.
+    &--gutters.#{$ROW}--breaks {
+        margin-bottom: 0;
+    }
+
     @each $label, $width in $viewport-min-widths {
-        @include viewport-down($label) {
-            &--#{$label}-gutterless-down {
-                @include row-gutterless;
+        @include viewport-min($label) {
+            &--#{$label}-gutters.#{$ROW}--#{$label}-breaks {
+                margin-bottom: 0;
             }
         }
     }
 
-    // Generate gutterless-only modifiers for each viewport size.
+    /*
+     * -------------------------------------------------------------------------
+     * Flow direction.
+     * -------------------------------------------------------------------------
+     */
+    $flows: row row-reverse column column-reverse;
+    
+    @each $flow in $flows {
+        &--direction-#{$flow} {
+            flex-direction: $flow;
+        }
+    }
+
     @each $label, $width in $viewport-min-widths {
-        @include viewport-only($label) {
-            &--#{$label}-gutterless-only {
-                @include row-gutterless;
+        @include viewport-min($label) {
+            @each $flow in $flows {
+                &--#{$label}-direction-#{$flow} {
+                    flex-direction: $flow;
+                }
             }
         }
     }
