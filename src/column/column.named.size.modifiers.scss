@@ -20,6 +20,8 @@
     @each $label, $percentage in $percentages {
         @include modifier($label) {
             flex: 0 0 $percentage;
+            width: $percentage;
+            max-width: $percentage;
         }
     }
 
@@ -29,6 +31,8 @@
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$label}') {
                 flex: 0 0 $percentage;
+                width: $percentage;
+                max-width: $percentage;
             }
         }
     }
@@ -39,6 +43,8 @@
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$label}') {
                 flex: 0 0 $percentage;
+                width: $percentage;
+                max-width: $percentage;
             }
         }
     }
@@ -49,6 +55,8 @@
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$label}') {
                 flex: 0 0 $percentage;
+                width: $percentage;
+                max-width: $percentage;
             }
         }
     }
@@ -59,6 +67,8 @@
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$label}') {
                 flex: 0 0 $percentage;
+                width: $percentage;
+                max-width: $percentage;
             }
         }
     }
@@ -69,6 +79,8 @@
         @include viewport-min($size) {
             @include modifier('#{$size}-#{$label}') {
                 flex: 0 0 $percentage;
+                width: $percentage;
+                max-width: $percentage;
             }
         }
     }
