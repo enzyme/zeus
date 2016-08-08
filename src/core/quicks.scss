@@ -1,0 +1,16 @@
+.#{$LAYOUT}-quick {
+    @extend .#{$LAYOUT};
+    @extend .#{$LAYOUT}--edges;
+}
+
+.#{$ROW}-quick {
+    @extend .#{$ROW};
+    @extend .#{$ROW}--bottoms;
+    @extend .#{$ROW}--gutters;
+    @extend .#{$ROW}--breaks;
+}
+
+.#{$COLUMN}-quick {
+    @extend .#{$COLUMN};
+    @extend .#{$COLUMN}--visible;
+}
