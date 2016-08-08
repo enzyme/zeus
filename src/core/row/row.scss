@@ -96,4 +96,34 @@
             }
         }
     }
+
+    //
+    // -------------------------------------------------------------------------
+    // Vertical alignment.
+    // -------------------------------------------------------------------------
+    //
+
+    $vertical-alignments: (
+        baseline: baseline,
+        center: center,
+        top: flex-start,
+        bottom: flex-end,
+        stretch: stretch,
+    );
+
+    @each $name, $alignment in $vertical-alignments {
+        &--valign-#{$name} {
+            align-items: $alignment;
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            @each $name, $alignment in $vertical-alignments {
+                &--#{$label}-valign-#{$name} {
+                    align-items: $alignment;
+                }
+            }
+        }
+    }
 }
