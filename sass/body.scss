@@ -1,0 +1,6 @@
+.Body {
+    background-color: map-get($colors, alpha);
+    color: map-get($colors, bravo);
+    font-family: unquote(map-get($fonts, alpha));
+    font-size: 18px;
+}

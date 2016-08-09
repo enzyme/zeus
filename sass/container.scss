@@ -1,0 +1,13 @@
+.Container {
+    padding: 4rem 0rem;
+
+    @each $name, $hex in $colors {
+        &--bg-#{$name} {
+            background-color: $hex;
+        }
+
+        &--fg-#{$name} {
+            color: $hex;
+        }
+    }
+}

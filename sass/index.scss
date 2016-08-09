@@ -1,23 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:900|Roboto:400,700|Roboto+Mono');
-@import 'scroll-mouse.scss';
-@import 'hero.scss';
+@import 'config.scss';
+
+@import 'body.scss';
+@import 'container.scss';
 @import 'heading.scss';
-@import 'examples.scss';
-@import 'slice.scss';
-@import 'code.scss';
-@import 'paragraph.scss';
-@import 'link.scss';
-@import 'pre.scss';
-@import 'navigation.scss';
-@import 'doc-body.scss';
-@import 'class-map.scss';
-@import 'table.scss';
-@import 'hero-example.scss';
-
-body {
-    padding: 0;
-    margin: 0;
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
