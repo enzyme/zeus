@@ -14,3 +14,9 @@
     width: $percent;
     max-width: $percent;
 }
+
+@mixin debug($color) {
+    @if $debug {
+        border: 1px solid $color;
+    }
+}

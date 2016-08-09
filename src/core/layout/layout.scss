@@ -5,6 +5,8 @@
     max-width: $layout_max_width;
     overflow: hidden;
 
+    @include debug(red);
+
     //
     // -------------------------------------------------------------------------
     // Edges.

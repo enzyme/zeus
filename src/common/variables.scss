@@ -4,6 +4,7 @@ $column_identifier: 'column' !default;
 $layout_max_width: 75rem !default;
 $column-count: 12 !default;
 $gutter-width: 2rem !default;
+$debug: false !default;
 
 $viewport-min-widths: (
     xs: 0px,
