@@ -19,7 +19,7 @@
         padding-left: 0rem;
         padding-right: 0rem;
 
-        .#{$COLUMN} {
+        > .#{$COLUMN} {
             padding: 0rem $half-gutter-width;
         }
     }
@@ -30,7 +30,7 @@
                 padding-left: 0rem;
                 padding-right: 0rem;
 
-                .#{$COLUMN} {
+                > .#{$COLUMN} {
                     padding: 0rem $half-gutter-width;
                 }
             }
