@@ -8,6 +8,9 @@
 
 @mixin flex-width($percent) {
     flex: 0 0 $percent;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: $percent;
     width: $percent;
     max-width: $percent;
 }
