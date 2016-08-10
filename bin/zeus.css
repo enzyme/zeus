@@ -2788,3 +2788,12 @@ body {
       text-align: center; }
     .Layout__column--xl-text-justify {
       text-align: justify; } }
+  .Layout__column > .Layout__row, .Layout__column-quick > .Layout__row, .Layout__column > .Layout__row-quick, .Layout__column-quick > .Layout__row-quick {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-bottom: -2rem; }
+  .Layout__column > .Layout__row--bottoms + .Layout__row, .Layout__column-quick > .Layout__row--bottoms + .Layout__row, .Layout__column > .Layout__row-quick + .Layout__row, .Layout__column-quick > .Layout__row-quick + .Layout__row, .Layout__column > .Layout__row--bottoms + .Layout__row-quick, .Layout__column-quick > .Layout__row--bottoms + .Layout__row-quick, .Layout__column > .Layout__row-quick + .Layout__row-quick, .Layout__column-quick > .Layout__row-quick + .Layout__row-quick {
+    margin-top: 2rem; }
+  .Layout__column > .Layout__row--gutters, .Layout__column-quick > .Layout__row--gutters, .Layout__column > .Layout__row-quick, .Layout__column-quick > .Layout__row-quick {
+    margin-left: -1rem;
+    margin-right: -1rem; }
