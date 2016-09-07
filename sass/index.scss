@@ -1,0 +1,51 @@
+@import '../node_modules/zeus-grid/src/zeus.scss';
+
+$font_alpha: 'Inconsolata', monospace;
+$font_bravo: 'Roboto', sans-serif;
+$font_charlie: 'Oswald', sans-serif;
+
+$colors: (
+    brand_alpha:   #000000,
+    brand_bravo:   #FFFF00,
+    shade_alpha:   #ECEFF1,
+    shade_bravo:   #607D8B,
+    shade_charlie: #455A64,
+    shade_delta:   #37474F,
+    shade_echo:    #263238,
+);
+
+body {
+    background-color: map-get($colors, brand_alpha);
+    font-family: $font_bravo;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: $font_charlie;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: $font_alpha;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+header {
+    background-image: url('../images/zeus-masthead.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    padding-top: 15vh;
+}
