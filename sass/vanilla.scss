@@ -1,0 +1,30 @@
+body {
+    background-color: map-get($colors, brand_alpha);
+    font-family: $font_bravo;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: $font_charlie;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: $font_alpha;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+a {
+    color: map-get($colors, shade_alpha);
+}

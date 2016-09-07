@@ -1,0 +1,31 @@
+.Masthead {
+    background-image: url('../images/zeus-masthead.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    padding: 1rem 0rem 0rem 0rem;
+
+    &__icon {
+        height: 2rem;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+
+        img {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__logo {
+        margin: 8rem 0rem 0rem 0rem;
+    }
+
+    &__bash {
+        background-color: transparentize(map-get($colors, shade_alpha), 0.5);
+        padding: 0.2rem 0.5rem;
+        border-radius: 20px;
+    }
+}

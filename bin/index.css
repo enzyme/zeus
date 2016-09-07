@@ -26,18 +26,15 @@ SOFTWARE.
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
   font-family: sans-serif;
   /* 1 */
-  line-height: 1.15;
-  /* 2 */
   -ms-text-size-adjust: 100%;
-  /* 3 */
+  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -244,7 +241,6 @@ hr {
  */
 button,
 input,
-optgroup,
 select,
 textarea {
   font: inherit;
@@ -2300,6 +2296,48 @@ body {
     margin-left: -1rem;
     margin-right: -1rem; }
 
+.util-bg-brand_alpha {
+  background-color: #000000; }
+
+.util-fg-brand_alpha {
+  color: #000000; }
+
+.util-bg-brand_bravo {
+  background-color: #FFFF00; }
+
+.util-fg-brand_bravo {
+  color: #FFFF00; }
+
+.util-bg-shade_alpha {
+  background-color: #ECEFF1; }
+
+.util-fg-shade_alpha {
+  color: #ECEFF1; }
+
+.util-bg-shade_bravo {
+  background-color: #607D8B; }
+
+.util-fg-shade_bravo {
+  color: #607D8B; }
+
+.util-bg-shade_charlie {
+  background-color: #455A64; }
+
+.util-fg-shade_charlie {
+  color: #455A64; }
+
+.util-bg-shade_delta {
+  background-color: #37474F; }
+
+.util-fg-shade_delta {
+  color: #37474F; }
+
+.util-bg-shade_echo {
+  background-color: #263238; }
+
+.util-fg-shade_echo {
+  color: #263238; }
+
 body {
   background-color: #000000;
   font-family: "Roboto", sans-serif;
@@ -2322,10 +2360,34 @@ h2 {
 h3 {
   font-size: 1rem; }
 
-header {
+a {
+  color: #ECEFF1; }
+
+.Button {
+  background-color: #FFFF00;
+  color: #263238;
+  border-radius: 2px;
+  padding: 0.75rem 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: inline-block; }
+
+.Masthead {
   background-image: url("../images/zeus-masthead.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
-  padding-top: 15vh; }
+  height: 50rem;
+  padding: 1rem 0rem 0rem 0rem; }
+  .Masthead__icon {
+    height: 2rem; }
+  .Masthead__link {
+    display: inline-flex;
+    align-items: center; }
+    .Masthead__link img {
+      margin-right: 0.5rem; }
+  .Masthead__logo {
+    margin: 8rem 0rem 0rem 0rem; }
+  .Masthead__bash {
+    background-color: rgba(236, 239, 241, 0.5);
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px; }

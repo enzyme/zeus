@@ -1,0 +1,9 @@
+@each $color, $hex in $colors {
+    .util-bg-#{$color} {
+        background-color: $hex;
+    }
+
+    .util-fg-#{$color} {
+        color: $hex;
+    }
+}

@@ -2,16 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ZEUS | A novel css grid framework</title>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Oswald" rel="stylesheet">
+    <title>ZEUS &#8212; A novel css grid.</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Oswald" rel="stylesheet"> -->
     <link rel="stylesheet" href="bin/index.css">
 </head>
 <body>
-    <header>
+    <header class="Masthead">
         <div class="Layout-quick">
             <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <a href="#docs">Docs</a>
+                </div>
+                <div class="Layout__column Layout__column--sm-visible Layout__column--text-center">
+                    <img class="Masthead__icon" src="images/icon-zeus-circle-white.svg" alt="ZEUS icon">
+                </div>
+                <div class="Layout__column-quick Layout__column--text-right">
+                    <a class="Masthead__link" href="#"><img src="images/icon-github.svg" alt="Github icon">Github</a>
+                </div>
+            </div>
+            <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
-                    <img src="images/logo-zeus.svg" alt="ZEUS logo">
+                    <img class="Masthead__logo" src="images/logo-zeus.svg" alt="ZEUS logo">
+                </div>
+            </div>
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick Layout__column--text-center">
+                    <span class="Masthead__bash">npm install --save zeus-grid / bower install zeus-grid</span>
+                </div>
+            </div>
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick Layout__column--text-center">
+                    <a href="#" class="Button">Download v7.0.0</a>
                 </div>
             </div>
         </div>
