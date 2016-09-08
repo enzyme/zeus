@@ -20,6 +20,7 @@
 
     <title>ZEUS &#8212; A novel css grid.</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
     <link rel="stylesheet" href="bin/index.css">
 </head>
 <body>
@@ -59,7 +60,7 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-8 Layout__column--lg-offset-2 Layout__column--text-center">
                     <h2>Synopsis</h2>
-                    <p>ZEUS takes a new approach to the standard run-of-the-mill css grid. Firstly, it follows the BEM naming methodology. Secondly, it has a novel approach to mobile first development. By default, all layouts, rows and columns are in their barest form (no display, gutters, edges etc) and need to be selectively structured when the viewport reaches specificied minimum widths &#8212; think of it as progressive enhancement.</p>
+                    <p>ZEUS takes a new approach to the standard run-of-the-mill css grid. Firstly, it follows the <a href="http://getbem.com/introduction/">BEM methodology</a>, so right off the bat you've got a framework that fits into your large production applications. Secondly, it has a novel approach to mobile first development. By default, all layouts, rows and columns are in their barest form (no display, gutters, edges etc) and need to be selectively structured when the browser's viewport reaches specific minimum widths &#8212; think of it as progressive enhancement.</p>
                     <img class="util-img-responsive" src="images/enhancement.svg" alt="Progressive enhancement illustration">
                 </div>
             </div>
@@ -67,6 +68,7 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
                     <h2>The default grid</h2>
+                    <p>It comes with 12 columns, a 75rem container (based on a 16px base font size) and 2rem gutters.</p>
                 </div>
             </div>
 
@@ -79,68 +81,68 @@
             <section id="grid-static">
                 <div class="Layout__row-quick">
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
-                    </div>
-                </div>
-                <div class="Layout__row-quick">
-                    <div class="Layout__column-quick">
-                        <div class="Column"></div>
-                    </div>
-                    <div class="Layout__column-quick">
-                        <div class="Column"></div>
-                    </div>
-                    <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                 </div>
                 <div class="Layout__row-quick">
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
                     </div>
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
+                    </div>
+                    <div class="Layout__column-quick">
+                        <div class="Column Column--inactive"></div>
                     </div>
                 </div>
                 <div class="Layout__row-quick">
                     <div class="Layout__column-quick">
-                        <div class="Column"></div>
+                        <div class="Column Column--inactive"></div>
+                    </div>
+                    <div class="Layout__column-quick">
+                        <div class="Column Column--inactive"></div>
+                    </div>
+                </div>
+                <div class="Layout__row-quick">
+                    <div class="Layout__column-quick">
+                        <div class="Column Column--inactive"></div>
                     </div>
                 </div>
             </section>
 
             <section id="grid-responsive">
                 <div class="Layout__row-quick">
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
-                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--md-4 Layout__column--lg-2">
+                    <div class="Layout__column-quick Layout__column--xs-12 Layout__column--sm-6 Layout__column--md-4 Layout__column--lg-2">
                         <div class="Column Column--active"></div>
                     </div>
                 </div>
@@ -173,7 +175,7 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-8 Layout__column--lg-offset-2 Layout__column--text-center">
                     <h2>All devices</h2>
-                    <p>Designed for mobile first development, ZEUS uses the following default breakpoints to suit a range of screen-sizes and devices, inspired by <a href="">Bootstrap 4</a>.</p>
+                    <p>Designed for mobile first development, ZEUS uses the following default breakpoints to suit a range of screen-sizes and devices commonly used to browse the web.</p>
                 </div>
             </div>
 
@@ -212,7 +214,7 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
                     <h1>Documentation</h1>
-                    <p>Anywhere you see $ in the examples below, you're able to specify a breakpoint such as xs-, md-, lg- etc or leave it out all together. For example, <code>Layout--$edges</code> can be used as <code>Layout--xs-edges</code> or simply <code>Layout--edges</code>.</p>
+                    <p>Anywhere you see $ in the examples below, you're able to specify a breakpoint such as <code>xs-</code>, <code>md-</code>, <code>lg-</code> etc or leave it out completely. For example, <code>Layout--$edges</code> can be used as <code>Layout--xs-edges</code> or simply <code>Layout--edges</code>.</p>
                 </div>
             </div>
 
@@ -221,7 +223,8 @@
                     <h2>Layout</h2>
                     <h3>.Layout, .Layout--solid, .Layout--fluid, .Layout--edges, .Layout--breakaway</h3>
                     <p>Every grid system needs a layout, it's the container that holds everything together. You can either use <code>"Layout Layout--solid"</code> for a centered container or <code>"Layout Layout--fluid"</code> for a container that spans the width of the whole page.</p>
-                    <p>To add edges to your layout (to stop text hitting the edge of the window) use <code>"Layout--$edges"</code></p>
+                    <p><code>"Layout--$edges"</code> adds edges to your layout (to stop text hitting the edge of the window)</p>
+                    <p><code>"Layout--$breakaway"</code> adds an extra gutter's worth of space under the layout to help it break away from content below it.</p>
                 </div>
             </div>
 
@@ -252,7 +255,16 @@
 
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
-                    <h1>Examples</h1>
+                    <h1>Example</h1>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
+                    <h1>Verbosity</h1>
+                    <p>We're all programmers here, and inheritly we don't like to type more code than we have too. If you're worried about the verbosity needed to get a simple grid setup in the examples above, don't stress.</p>
+                    <p>If you're looking to throw together a stock standard layout/row/column(s) setup, we've created some handy <code>quick</code> classes to get you up and running faster.</p>
+                    <p>Here's an example</p>
                 </div>
             </div>
         </div>
@@ -279,14 +291,16 @@
             </div>
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
-                    <p>Created by <a href="">Tristan Strathearn</a>. Open source under the <a href="">MIT license</a>.</p>
-                    <p>Designed by <a href="">Thomas Butler</a>. Images thanks to <a href="">Unplash</a>.</p>
+                    <p>ZEUS was created by <a href="">Tristan Strathearn</a>. It's open source under the <a href="">MIT license</a>.</p>
+                    <p>Page designed by <a href="">Thomas Butler</a>. Images thanks to <a href="">Unplash</a>.</p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
     <script src="https://cdn.rawgit.com/enzyme/qoob/master/dist/qoob.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
         // Wondering what the hell Qoob is? It's another little project I work
         // on as an alternative library for simple DOM manipulation.
@@ -295,10 +309,28 @@
             // Setup the little grid demo.
             Qoob.hide('#grid-responsive');
             Qoob.show('#toggle-grid', 'inline-block');
-            Qoob.on('#toggle-grid', 'click', function(e) {
+            Qoob.on('#toggle-grid', 'click', function(_) {
                 Qoob.toggle('#grid-static');
                 Qoob.toggle('#grid-responsive');
             });
+
+            var columns_a = Qoob.find('.Column--active');
+            var columns_b = Qoob.find('.Column--inactive');
+
+            var animator = function() {
+                setTimeout(function() {
+                    var i_a = Math.floor(Math.random() * columns_a.length);
+                    var i_b = Math.floor(Math.random() * columns_b.length);
+
+                    Qoob.removeClass(columns_a, 'Column--focused');
+                    Qoob.addClass(columns_a[i_a], 'Column--focused');
+                    Qoob.removeClass(columns_b, 'Column--focused');
+                    Qoob.addClass(columns_b[i_b], 'Column--focused');
+
+                    animator();
+                }, 1500);
+            };
+            animator();
         });
     </script>
 </body>

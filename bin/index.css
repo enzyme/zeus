@@ -2412,17 +2412,18 @@ code {
   background-color: #FFFF00; }
 
 .Column {
-  height: 5rem;
+  height: 3rem;
   opacity: 0.5;
-  transition: opacity .5s ease;
-  border: 2px solid #ECEFF1; }
-  .Column:hover {
+  transition: opacity 1s ease; }
+  .Column--inactive {
+    border: 2px solid #ECEFF1; }
+  .Column--focused {
     opacity: 1;
-    box-shadow: inset 0px 0px 10px rgba(236, 239, 241, 0.5); }
+    box-shadow: inset 0px 0px 15px rgba(236, 239, 241, 0.5); }
   .Column--active {
-    border: 2px solid #FFFF00; }
-    .Column--active:hover {
-      box-shadow: inset 0px 0px 10px rgba(255, 255, 0, 0.5); }
+    border: 4px solid #FFFF00; }
+    .Column--active .Column--focused {
+      box-shadow: inset 0px 0px 15px rgba(255, 255, 0, 0.5); }
 
 .Container {
   padding: 4rem 0rem; }
