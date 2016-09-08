@@ -12,5 +12,10 @@
         a {
             color: map-get($colors, brand-alpha);
         }
+
+        code {
+            color: map-get($colors, brand-alpha);
+            background-color: transparentize(map-get($colors, brand-bravo), 0.8);
+        }
     }
 }

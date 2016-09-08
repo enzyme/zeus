@@ -210,8 +210,49 @@
     <section class="Container Container--light">
         <div class="Layout-quick">
             <div class="Layout__row-quick">
-                <div class="Layout__column-quick Layout__column--text-center">
-                    <h2>Documentation</h2>
+                <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
+                    <h1>Documentation</h1>
+                    <p>Anywhere you see $ in the examples below, you're able to specify a breakpoint such as xs-, md-, lg- etc or leave it out all together. For example, <code>Layout--$edges</code> can be used as <code>Layout--xs-edges</code> or simply <code>Layout--edges</code>.</p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <h2>Layout</h2>
+                    <h3>.Layout, .Layout--solid, .Layout--fluid, .Layout--edges, .Layout--breakaway</h3>
+                    <p>Every grid system needs a layout, it's the container that holds everything together. You can either use <code>"Layout Layout--solid"</code> for a centered container or <code>"Layout Layout--fluid"</code> for a container that spans the width of the whole page.</p>
+                    <p>To add edges to your layout (to stop text hitting the edge of the window) use <code>"Layout--$edges"</code></p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <h2>Row</h2>
+                    <h3>.Layout__row, .Layout__row--gutters, .Layout__row--bottoms, .Layout__row--breaks, .Layout__row--direction-*, .Layout__row--valign-*</h3>
+                    <p>The next element of the grid system is the row. The row, by default is simply a container to hold columns. Using the available modifiers, you can change how the columns inside of it behave.</p>
+                    <p><code>".Layout__row--$gutters"</code> will add gutters the left and right of the columns within it.</p>
+                    <p><code>".Layout__row--$bottoms"</code> will add gutters the bottom of the columns within it.</p>
+                    <p><code>".Layout__row--$breaks"</code> will add a gutter below the row.</p>
+                    <p><code>".Layout__row--direction-*"</code> will change the direction in which columns are laid out. The options are <code>row</code>, <code>row-reverse</code>, <code>column</code> and <code>column-reverse</code>.</p>
+                    <p><code>".Layout__row--valign-*"</code> will change the vertical alignment of columns. The options are <code>baseline</code>, <code>center</code>, <code>top</code>, <code>bottom</code> and <code>stretch</code>.</p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <h2>Column</h2>
+                    <h3>.Layout__column, .Layout__column--visible, .Layout__column--hidden, .Layout__column--*, .Layout__column--offset-*, .Layout__column--text-*</h3>
+                    <p>Columns hold your site content. They're ultimately what dictate the look and feel of your entire site and help reflow content across various viewport sizes.</p>
+                    <p><code>".Layout__column--$visible"</code> and <code>".Layout__column--$hidden"</code> will respectively show and hide the column.</p>
+                    <p><code>".Layout__column--$*"</code> defines how wide the column will be. By default the options are <code>1-12</code>, eg: <code>".Layout__column--6"</code> or <code>".Layout__column--xs-4"</code>.</p>
+                    <p><code>".Layout__column--$offset-*"</code> defines the offset of a column, this follows the same options as above.</p>
+                    <p><code>".Layout__column--$text-*"</code> defines the text alignment for the column. The options are <code>left</code>, <code>right</code>, <code>center</code> and <code>justify</code>.</p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
+                    <h1>Examples</h1>
                 </div>
             </div>
         </div>

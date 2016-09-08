@@ -1519,6 +1519,9 @@ body {
       flex-basis: 66.66667%;
       width: 66.66667%;
       max-width: 66.66667%; } }
+  .Layout__column--offset-0 {
+    margin: 0;
+    margin-left: 0%; }
   .Layout__column--offset-1 {
     margin: 0;
     margin-left: 8.33333%; }
@@ -1555,6 +1558,10 @@ body {
   .Layout__column--offset-12 {
     margin: 0;
     margin-left: 100%; }
+  @media (min-width: 0px) {
+    .Layout__column--xs-offset-0 {
+      margin: 0;
+      margin-left: 0%; } }
   @media (min-width: 0px) {
     .Layout__column--xs-offset-1 {
       margin: 0;
@@ -1604,6 +1611,10 @@ body {
       margin: 0;
       margin-left: 100%; } }
   @media (min-width: 544px) {
+    .Layout__column--sm-offset-0 {
+      margin: 0;
+      margin-left: 0%; } }
+  @media (min-width: 544px) {
     .Layout__column--sm-offset-1 {
       margin: 0;
       margin-left: 8.33333%; } }
@@ -1651,6 +1662,10 @@ body {
     .Layout__column--sm-offset-12 {
       margin: 0;
       margin-left: 100%; } }
+  @media (min-width: 768px) {
+    .Layout__column--md-offset-0 {
+      margin: 0;
+      margin-left: 0%; } }
   @media (min-width: 768px) {
     .Layout__column--md-offset-1 {
       margin: 0;
@@ -1700,6 +1715,10 @@ body {
       margin: 0;
       margin-left: 100%; } }
   @media (min-width: 992px) {
+    .Layout__column--lg-offset-0 {
+      margin: 0;
+      margin-left: 0%; } }
+  @media (min-width: 992px) {
     .Layout__column--lg-offset-1 {
       margin: 0;
       margin-left: 8.33333%; } }
@@ -1747,6 +1766,10 @@ body {
     .Layout__column--lg-offset-12 {
       margin: 0;
       margin-left: 100%; } }
+  @media (min-width: 1200px) {
+    .Layout__column--xl-offset-0 {
+      margin: 0;
+      margin-left: 0%; } }
   @media (min-width: 1200px) {
     .Layout__column--xl-offset-1 {
       margin: 0;
@@ -2407,6 +2430,9 @@ code {
     color: #000000; }
     .Container--light a {
       color: #000000; }
+    .Container--light code {
+      color: #000000;
+      background-color: rgba(255, 255, 0, 0.2); }
 
 .Footer {
   background-position: top;
