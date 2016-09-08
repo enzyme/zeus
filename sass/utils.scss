@@ -1,10 +1,10 @@
 @each $color, $hex in $colors {
     .util-bg-#{$color} {
-        background-color: $hex;
+        background-color: $hex !important;
     }
 
     .util-fg-#{$color} {
-        color: $hex;
+        color: $hex !important;
     }
 }
 

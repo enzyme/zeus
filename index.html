@@ -7,9 +7,8 @@
        \ \_\ \_\ \____\/\____\/\____\ \____/\_\
         \/_/\/_/\/____/\/____/\/____/\/___/\/_/
 
-    I see you've come to have a look around, welcome!
-    This entire landing page was built with the latest version of ZEUS.
-    It should hopefully give you an idea of how it's used in a real world application.
+    I see you've come to have a look around.
+    This entire landing page layout was built with the latest version of ZEUS.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +18,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>ZEUS &#8212; A novel css grid.</title>
+    <meta name="Description" content="A novel mobile first flexbox BEM css grid framework that will rock your socks off.">
+    <meta name="Keywords" content="ZEUS, BEM, CSS, grid, flexbox, web">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Oswald" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
     <link rel="stylesheet" href="bin/index.css">
 </head>
 <body>
@@ -34,7 +34,7 @@
                     <img class="Masthead__icon" src="images/icon-zeus-circle-white.svg" alt="ZEUS icon">
                 </div>
                 <div class="Layout__column-quick Layout__column--text-right">
-                    <a class="Masthead__link" href="#"><img src="images/icon-github.svg" alt="Github icon">Github</a>
+                    <a class="Masthead__link" href="https://github.com/enzyme/zeus"><img src="images/icon-github.svg" alt="Github icon">Github</a>
                 </div>
             </div>
             <div class="Layout__row-quick">
@@ -49,7 +49,7 @@
             </div>
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
-                    <a href="#" class="Button">Get started</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/enzyme/zeus" class="Button">Get started</a>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-8 Layout__column--lg-offset-2 Layout__column--text-center">
                     <h2>Synopsis</h2>
-                    <p>ZEUS takes a new approach to the standard run-of-the-mill css grid. Firstly, it follows the <a href="http://getbem.com/introduction/">BEM methodology</a>, so right off the bat you've got a framework that fits into your large production applications. Secondly, it has a novel approach to mobile first development. By default, all layouts, rows and columns are in their barest form (no display, gutters, edges etc) and need to be selectively structured when the browser's viewport reaches specific minimum widths &#8212; think of it as progressive enhancement.</p>
+                    <p>ZEUS takes a new approach to the standard run-of-the-mill css grid. Firstly, it follows the <a target="_blank" rel="noopener noreferrer" href="http://getbem.com/introduction/">BEM methodology</a>, so right off the bat you've got a framework that fits into your large production applications. Secondly, it has a novel approach to mobile first development. By default, all layouts, rows and columns are in their barest form (no display, gutters, edges etc) and need to be selectively structured when the browser's viewport reaches specific minimum widths &#8212; think of it as progressive enhancement.</p>
                     <img class="util-img-responsive" src="images/enhancement.svg" alt="Progressive enhancement illustration">
                 </div>
             </div>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <section class="Container Container--light">
+    <section id="docs" class="Container Container--light">
         <div class="Layout-quick">
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
@@ -256,15 +256,58 @@
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
                     <h1>Example</h1>
+                    <p>Let's throw together a simple 3 column layout to get you started.</p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <pre class="prettyprint">&lt;div class=&quot;Layout Layout--solid Layout--edges&quot;&gt;
+    &lt;div class=&quot;Layout__row Layout__row--bottoms Layout__row--gutters Layout__row--breaks&quot;&gt;
+        &lt;div class=&quot;Layout__column Layout__column--visible&quot;&gt;
+            &lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--visible&quot;&gt;
+            &lt;p&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column Layout__column--visible&quot;&gt;
+            &lt;p&gt;Sed posuere consectetur est at lobortis.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
                 </div>
             </div>
 
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
-                    <h1>Verbosity</h1>
-                    <p>We're all programmers here, and inheritly we don't like to type more code than we have too. If you're worried about the verbosity needed to get a simple grid setup in the examples above, don't stress.</p>
-                    <p>If you're looking to throw together a stock standard layout/row/column(s) setup, we've created some handy <code>quick</code> classes to get you up and running faster.</p>
-                    <p>Here's an example</p>
+                    <h1>Verbosity?</h1>
+                    <p>We're all programmers here, and inherently we don't like to type more code than we have too. If you're worried about the verbosity, don't stress.</p>
+                    <p>We've created a handy <code>quick</code> class to get you up and running faster for each of the primary elements (layout, row and column).</p>
+                    <p>Here's an example that produces the same result as above.</p>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick">
+                    <pre class="prettyprint">&lt;div class=&quot;Layout-quick&quot;&gt;
+    &lt;div class=&quot;Layout__row-quick&quot;&gt;
+        &lt;div class=&quot;Layout__column-quick&quot;&gt;
+            &lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column-quick&quot;&gt;
+            &lt;p&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Layout__column-quick&quot;&gt;
+            &lt;p&gt;Sed posuere consectetur est at lobortis.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+
+            <div class="Layout__row-quick">
+                <div class="Layout__column-quick Layout__column--lg-6 Layout__column--lg-offset-3 Layout__column--text-center">
+                    <p>Off course you can always stick to the first method, for finer grain control.</p>
                 </div>
             </div>
         </div>
@@ -276,7 +319,7 @@
                 <div class="Layout__column-quick Layout__column--lg-8 Layout__column--lg-offset-2 Layout__column--text-center">
                     <h2>Customization</h2>
                     <p>Need more columns, different gutter sizes, a larger or smaller layout... or don't like your BEM classes starting with a capital letter? We've got you covered.</p>
-                    <p><strong>Simply check out <a href="#">src/common/variables</a> to see what's available to tweak.</strong></p>
+                    <p><strong>Simply check out <a target="_blank" rel="noopener noreferrer" href="#">src/common/variables</a> to see what's available to tweak.</strong></p>
                 </div>
             </div>
         </div>
@@ -286,21 +329,20 @@
         <div class="Layout-quick">
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
-                    <a href="#" class="Button">Get started</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/enzyme/zeus" class="Button">Get started</a>
                 </div>
             </div>
             <div class="Layout__row-quick">
                 <div class="Layout__column-quick Layout__column--text-center">
-                    <p>ZEUS was created by <a href="">Tristan Strathearn</a>. It's open source under the <a href="">MIT license</a>.</p>
-                    <p>Page designed by <a href="">Thomas Butler</a>. Images thanks to <a href="">Unplash</a>.</p>
+                    <p>ZEUS was created by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/r3oath">Tristan Strathearn</a>. It's open source under the <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/enzyme/zeus/master/LICENSE">MIT license</a>.</p>
+                    <p>Page designed by <a target="_blank" rel="noopener noreferrer" href="http://thomasbutler.com.au/">Thomas Butler</a>. Images thanks to <a target="_blank" rel="noopener noreferrer" href="https://unsplash.com/">Unplash</a>.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
     <script src="https://cdn.rawgit.com/enzyme/qoob/master/dist/qoob.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script>
         // Wondering what the hell Qoob is? It's another little project I work
         // on as an alternative library for simple DOM manipulation.

@@ -2324,46 +2324,46 @@ body {
     margin-right: -1rem; }
 
 .util-bg-brand-alpha {
-  background-color: #000000; }
+  background-color: #000000 !important; }
 
 .util-fg-brand-alpha {
-  color: #000000; }
+  color: #000000 !important; }
 
 .util-bg-brand-bravo {
-  background-color: #FFFF00; }
+  background-color: #FFFF00 !important; }
 
 .util-fg-brand-bravo {
-  color: #FFFF00; }
+  color: #FFFF00 !important; }
 
 .util-bg-shade-alpha {
-  background-color: #ECEFF1; }
+  background-color: #ECEFF1 !important; }
 
 .util-fg-shade-alpha {
-  color: #ECEFF1; }
+  color: #ECEFF1 !important; }
 
 .util-bg-shade-bravo {
-  background-color: #607D8B; }
+  background-color: #607D8B !important; }
 
 .util-fg-shade-bravo {
-  color: #607D8B; }
+  color: #607D8B !important; }
 
 .util-bg-shade-charlie {
-  background-color: #455A64; }
+  background-color: #455A64 !important; }
 
 .util-fg-shade-charlie {
-  color: #455A64; }
+  color: #455A64 !important; }
 
 .util-bg-shade-delta {
-  background-color: #37474F; }
+  background-color: #37474F !important; }
 
 .util-fg-shade-delta {
-  color: #37474F; }
+  color: #37474F !important; }
 
 .util-bg-shade-echo {
-  background-color: #263238; }
+  background-color: #263238 !important; }
 
 .util-fg-shade-echo {
-  color: #263238; }
+  color: #263238 !important; }
 
 .util-img-responsive {
   width: auto;
