@@ -1,18 +1,17 @@
 .Masthead {
-    background-image: url('../images/zeus-masthead.jpg');
+    height: 53rem;
     background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50rem;
+    background-repeat: repeat-x;
     padding: 1rem 0rem 0rem 0rem;
+    background-image: url('../images/zeus-masthead.jpg');
 
     &__icon {
         height: 2rem;
     }
 
     &__link {
-        display: inline-flex;
         align-items: center;
+        display: inline-flex;
 
         img {
             margin-right: 0.5rem;
@@ -20,12 +19,17 @@
     }
 
     &__logo {
-        margin: 8rem 0rem 0rem 0rem;
+        margin: 12rem 0rem 0rem 0rem;
     }
 
-    &__bash {
-        background-color: transparentize(map-get($colors, shade_alpha), 0.5);
-        padding: 0.2rem 0.5rem;
-        border-radius: 20px;
+    &__keypoint {
+        border: 1px solid transparentize(map-get($colors, shade-echo), 0.5);
+        padding: 0.1rem 0.3rem;
+        border-radius: 3px;
+        display: none;
+
+        @include viewport-min('sm') {
+            display: inline-block;
+        }
     }
 }

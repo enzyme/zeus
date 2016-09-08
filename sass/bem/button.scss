@@ -1,8 +1,10 @@
 .Button {
-    background-color: map-get($colors, brand_bravo);
-    color: map-get($colors, shade_echo);
+    border: none;
+    cursor: pointer;
     border-radius: 2px;
     padding: 0.75rem 2rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     display: inline-block;
+    color: map-get($colors, shade-echo);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: map-get($colors, brand-bravo);
 }

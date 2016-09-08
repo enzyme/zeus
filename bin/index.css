@@ -26,15 +26,18 @@ SOFTWARE.
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
   font-family: sans-serif;
   /* 1 */
-  -ms-text-size-adjust: 100%;
+  line-height: 1.15;
   /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 3 */ }
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -241,6 +244,7 @@ hr {
  */
 button,
 input,
+optgroup,
 select,
 textarea {
   font: inherit;
@@ -2296,63 +2300,68 @@ body {
     margin-left: -1rem;
     margin-right: -1rem; }
 
-.util-bg-brand_alpha {
+.util-bg-brand-alpha {
   background-color: #000000; }
 
-.util-fg-brand_alpha {
+.util-fg-brand-alpha {
   color: #000000; }
 
-.util-bg-brand_bravo {
+.util-bg-brand-bravo {
   background-color: #FFFF00; }
 
-.util-fg-brand_bravo {
+.util-fg-brand-bravo {
   color: #FFFF00; }
 
-.util-bg-shade_alpha {
+.util-bg-shade-alpha {
   background-color: #ECEFF1; }
 
-.util-fg-shade_alpha {
+.util-fg-shade-alpha {
   color: #ECEFF1; }
 
-.util-bg-shade_bravo {
+.util-bg-shade-bravo {
   background-color: #607D8B; }
 
-.util-fg-shade_bravo {
+.util-fg-shade-bravo {
   color: #607D8B; }
 
-.util-bg-shade_charlie {
+.util-bg-shade-charlie {
   background-color: #455A64; }
 
-.util-fg-shade_charlie {
+.util-fg-shade-charlie {
   color: #455A64; }
 
-.util-bg-shade_delta {
+.util-bg-shade-delta {
   background-color: #37474F; }
 
-.util-fg-shade_delta {
+.util-fg-shade-delta {
   color: #37474F; }
 
-.util-bg-shade_echo {
+.util-bg-shade-echo {
   background-color: #263238; }
 
-.util-fg-shade_echo {
+.util-fg-shade-echo {
   color: #263238; }
 
+.util-img-responsive {
+  width: auto;
+  max-width: 100%; }
+
 body {
-  background-color: #000000;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 700; }
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  line-height: 1.8; }
 
 h1 {
-  font-family: "Oswald", sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif; }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Inconsolata", monospace;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: "Inconsolata", monospace; }
 
 h2 {
   font-size: 1.5rem; }
@@ -2364,30 +2373,56 @@ a {
   color: #ECEFF1; }
 
 .Button {
-  background-color: #FFFF00;
-  color: #263238;
+  border: none;
+  cursor: pointer;
   border-radius: 2px;
   padding: 0.75rem 2rem;
+  display: inline-block;
+  color: #263238;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  display: inline-block; }
+  background-color: #FFFF00; }
+
+.Column {
+  height: 5rem;
+  opacity: 0.5;
+  transition: opacity .5s ease;
+  border: 2px solid #ECEFF1; }
+  .Column:hover {
+    opacity: 1;
+    box-shadow: inset 0px 0px 10px rgba(236, 239, 241, 0.5); }
+  .Column--active {
+    border: 2px solid #FFFF00; }
+    .Column--active:hover {
+      box-shadow: inset 0px 0px 10px rgba(255, 255, 0, 0.5); }
+
+.Container {
+  padding: 4rem 0rem; }
+  .Container--dark {
+    color: #ECEFF1; }
+  .Container--light {
+    background-color: #ECEFF1;
+    color: #000000; }
 
 .Masthead {
-  background-image: url("../images/zeus-masthead.jpg");
+  height: 53rem;
   background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50rem;
-  padding: 1rem 0rem 0rem 0rem; }
+  background-repeat: repeat-x;
+  padding: 1rem 0rem 0rem 0rem;
+  background-image: url("../images/zeus-masthead.jpg"); }
   .Masthead__icon {
     height: 2rem; }
   .Masthead__link {
-    display: inline-flex;
-    align-items: center; }
+    align-items: center;
+    display: inline-flex; }
     .Masthead__link img {
       margin-right: 0.5rem; }
   .Masthead__logo {
-    margin: 8rem 0rem 0rem 0rem; }
-  .Masthead__bash {
-    background-color: rgba(236, 239, 241, 0.5);
-    padding: 0.2rem 0.5rem;
-    border-radius: 20px; }
+    margin: 12rem 0rem 0rem 0rem; }
+  .Masthead__keypoint {
+    border: 1px solid rgba(38, 50, 56, 0.5);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    display: none; }
+    @media (min-width: 544px) {
+      .Masthead__keypoint {
+        display: inline-block; } }
