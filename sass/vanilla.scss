@@ -29,3 +29,7 @@ h3 {
 a {
     color: map-get($colors, shade-alpha);
 }
+
+code {
+    color: map-get($colors, brand-bravo);
+}

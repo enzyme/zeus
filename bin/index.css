@@ -2372,6 +2372,9 @@ h3 {
 a {
   color: #ECEFF1; }
 
+code {
+  color: #FFFF00; }
+
 .Button {
   border: none;
   cursor: pointer;
@@ -2402,6 +2405,8 @@ a {
   .Container--light {
     background-color: #ECEFF1;
     color: #000000; }
+    .Container--light a {
+      color: #000000; }
 
 .Masthead {
   height: 53rem;

@@ -1,6 +1,6 @@
 .Container {
     padding: 4rem 0rem;
-    
+
     &--dark {
         color: map-get($colors, shade-alpha);
     }
@@ -8,5 +8,9 @@
     &--light {
         background-color: map-get($colors, shade-alpha);
         color: map-get($colors, brand-alpha);
+
+        a {
+            color: map-get($colors, brand-alpha);
+        }
     }
 }
