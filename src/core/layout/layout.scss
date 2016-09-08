@@ -1,11 +1,24 @@
 .#{$LAYOUT} {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: $layout_max_width;
     overflow: hidden;
 
     @include debug(red);
+
+    //
+    // -------------------------------------------------------------------------
+    // Containment.
+    // -------------------------------------------------------------------------
+    //
+
+    &--solid {
+        margin: 0 auto;
+        max-width: $layout_max_width;
+    }
+
+    &--fluid {
+        width: 100%;
+    }
 
     //
     // -------------------------------------------------------------------------

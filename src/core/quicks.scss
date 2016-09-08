@@ -1,5 +1,6 @@
 .#{$LAYOUT}-quick {
     @extend .#{$LAYOUT};
+    @extend .#{$LAYOUT}--solid;
     @extend .#{$LAYOUT}--edges;
 }
 

@@ -429,9 +429,12 @@ body {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  margin: 0 auto;
-  max-width: 75rem;
   overflow: hidden; }
+  .Layout--solid, .Layout-quick {
+    margin: 0 auto;
+    max-width: 75rem; }
+  .Layout--fluid {
+    width: 100%; }
   .Layout--edges, .Layout-quick {
     overflow: auto; }
     .Layout--edges .Layout__row, .Layout-quick .Layout__row, .Layout--edges .Layout__row-quick, .Layout-quick .Layout__row-quick {
