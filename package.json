@@ -1,7 +1,7 @@
 {
   "name": "zeus-grid",
   "version": "6.6.0",
-  "description": "A BEM flavoured, mobile first flexbox grid framework.",
+  "description": "A novel mobile first flexbox BEM css grid framework that will rock your socks off.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enzyme/zeus.git"
