@@ -2351,7 +2351,7 @@ body {
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
-  line-height: 1.8; }
+  line-height: 1.5; }
 
 h1 {
   font-size: 3rem;
@@ -2407,6 +2407,14 @@ code {
     color: #000000; }
     .Container--light a {
       color: #000000; }
+
+.Footer {
+  background-position: top;
+  background-repeat: repeat-x;
+  padding: 14rem 0rem 0rem 0rem;
+  background-image: url("../images/zeus-footer.jpg"); }
+  .Footer a {
+    color: #263238; }
 
 .Masthead {
   height: 53rem;

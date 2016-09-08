@@ -1,0 +1,10 @@
+.Footer {
+    background-position: top;
+    background-repeat: repeat-x;
+    padding: 14rem 0rem 0rem 0rem;
+    background-image: url('../images/zeus-footer.jpg');
+
+    a {
+        color: map-get($colors, shade-echo);
+    }
+}
