@@ -88,7 +88,7 @@
     // -------------------------------------------------------------------------
     //
 
-    @for $i from 1 through $column-count {
+    @for $i from 0 through $column-count {
         &--offset-#{$i} {
             margin: 0;
             margin-left: ($i / $column-count) * 100%;
@@ -96,7 +96,7 @@
     }
 
     @each $label, $width in $viewport-min-widths {
-        @for $i from 1 through $column-count {
+        @for $i from 0 through $column-count {
             @include viewport-min($label) {
                 &--#{$label}-offset-#{$i} {
                     margin: 0;
