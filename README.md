@@ -1,7 +1,7 @@
 <p align="center"><img src="https://cloud.githubusercontent.com/assets/2805249/18371045/e22c4614-7674-11e6-8d3a-187b47818141.png" style="width: 100px;"></p>
 <h1 align="center">ZEUS</h1>
 <p align="center">A novel mobile first flexbox BEM css grid framework that will rock your socks off.</p>
-<p align="center">Check out the official web page at [http://enzyme.github.io/zeus/](http://enzyme.github.io/zeus/)</p>
+<p align="center">Check out the official web page at http://enzyme.github.io/zeus</p>
 
 # Installation
 
