@@ -1,0 +1,192 @@
+.#{$COLUMN} {
+    flex: 1;
+    display: none;
+
+    @include debug(green);
+
+    //
+    // -------------------------------------------------------------------------
+    // Visibility.
+    // -------------------------------------------------------------------------
+    //
+
+    &--visible {
+        display: block;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            &--#{$label}-visible {
+                display: block;
+            }
+
+            &--#{$label}-hidden {
+                display: none;
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Column sizing.
+    // -------------------------------------------------------------------------
+    //
+
+    @for $i from 1 through $column-count {
+        &--#{$i} {
+            @include flex-width(($i / $column-count) * 100%);
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @for $i from 1 through $column-count {
+            @include viewport-min($label) {
+                &--#{$label}-#{$i} {
+                    @include flex-width(($i / $column-count) * 100%);
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Named column sizing.
+    // -------------------------------------------------------------------------
+    //
+
+    $named-sizes: (
+        half: 50%,
+        quater: 25%,
+        third: (100% / 3),
+        three-quaters: (25% * 3),
+        two-thirds: ((100% / 3) * 2),
+    );
+
+    @each $name, $size in $named-sizes {
+        &--#{$name} {
+            @include flex-width($size);
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            @each $name, $size in $named-sizes {
+                &--#{$label}-#{$name} {
+                    @include flex-width($size);
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Offsets.
+    // -------------------------------------------------------------------------
+    //
+
+    @for $i from 0 through $column-count {
+        &--offset-#{$i} {
+            margin: 0;
+            margin-left: ($i / $column-count) * 100%;
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @for $i from 0 through $column-count {
+            @include viewport-min($label) {
+                &--#{$label}-offset-#{$i} {
+                    margin: 0;
+                    margin-left: ($i / $column-count) * 100%;
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Offsets based on row direction modifiers.
+    // -------------------------------------------------------------------------
+    //
+
+    @at-root {
+        $flows: (
+            column: top,
+            column-reverse: bottom,
+        );
+
+        @each $flow, $direction in $flows {
+            .#{$ROW}--direction-#{$flow} {
+                @for $i from 1 through $column-count {
+                    .#{$COLUMN}--offset-#{$i} {
+                        margin: 0;
+                        margin-#{map-get($flows, $flow)}: ($i / $column-count) * 100%;
+                    }
+                }
+            }
+        }
+
+        @each $flow, $direction in $flows {
+            .#{$ROW}--direction-#{$flow} {
+                @each $label, $width in $viewport-min-widths {
+                    @include viewport-min($label) {
+                        @for $i from 1 through $column-count {
+                            .#{$COLUMN}--#{$label}-offset-#{$i} {
+                                margin: 0;
+                                margin-#{map-get($flows, $flow)}: ($i / $column-count) * 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Text alignment.
+    // -------------------------------------------------------------------------
+    //
+
+    $text-alignments: left right center justify;
+
+    @each $alignment in $text-alignments {
+        &--text-#{$alignment} {
+            text-align: $alignment;
+        }
+    }
+
+    @each $label, $width in $viewport-min-widths {
+        @include viewport-min($label) {
+            @each $alignment in $text-alignments {
+                &--#{$label}-text-#{$alignment} {
+                    text-align: $alignment;
+                }
+            }
+        }
+    }
+
+    //
+    // -------------------------------------------------------------------------
+    // Nesting rows/columns.
+    // -------------------------------------------------------------------------
+    //
+
+    > .#{$ROW} {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-bottom: -$gutter-width;
+    }
+
+    > .#{$ROW}--bottoms + .#{$ROW} {
+        margin-top: $gutter-width;
+    }
+
+    > .#{$ROW}--gutters {
+        margin-left: -$half-gutter-width;
+        margin-right: -$half-gutter-width;
+    }
+}
