@@ -1,10 +1,16 @@
 .Button {
     border: none;
+    line-height: 1;
     cursor: pointer;
     border-radius: 2px;
-    padding: 0.75rem 2rem;
+    padding: 1rem 1.5rem;
     display: inline-block;
+    transition: all .5s ease;
     color: map-get($colors, shade-echo);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    background-color: map-get($colors, brand-bravo);
+    background-color: transparentize(map-get($colors, brand-bravo), 0.35);
+
+    &:hover, &:focus {
+        background-color: transparentize(map-get($colors, brand-bravo), 0);
+    }
 }

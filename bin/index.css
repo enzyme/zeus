@@ -427,12 +427,9 @@ body {
 .Layout, .Layout-quick {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 75rem;
   overflow: hidden; }
-  .Layout--solid, .Layout-quick {
-    margin: 0 auto;
-    max-width: 75rem; }
-  .Layout--fluid {
-    width: 100%; }
   .Layout--edges, .Layout-quick {
     overflow: auto; }
     .Layout--edges .Layout__row, .Layout-quick .Layout__row, .Layout--edges .Layout__row-quick, .Layout-quick .Layout__row-quick {
@@ -2384,9 +2381,6 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif; }
-  @media (min-width: 544px) {
-    h1 {
-      font-size: 3rem; } }
 
 h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -2400,19 +2394,25 @@ h3 {
 
 a {
   color: #ECEFF1; }
+  a:hover, a:focus {
+    text-decoration: none; }
 
 code {
   color: #FFFF00; }
 
 .Button {
   border: none;
+  line-height: 1;
   cursor: pointer;
   border-radius: 2px;
-  padding: 0.75rem 2rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
+  transition: all .5s ease;
   color: #263238;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  background-color: #FFFF00; }
+  background-color: rgba(255, 255, 0, 0.65); }
+  .Button:hover, .Button:focus {
+    background-color: yellow; }
 
 .Column {
   height: 3rem;
@@ -2472,3 +2472,19 @@ code {
     @media (min-width: 544px) {
       .Masthead__keypoint {
         display: inline-block; } }
+
+.Powered {
+  opacity: 0.5;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  transition: all .5s ease; }
+  .Powered:hover {
+    opacity: 1; }
+  .Powered__image {
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    justify-content: center; }
+    .Powered__image img {
+      width: 2rem; }
