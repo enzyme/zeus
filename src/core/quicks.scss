@@ -4,6 +4,11 @@
     @extend .#{$LAYOUT}--edges;
 }
 
+.util-#{to_lower_case($layout_identifier)}-common {
+    @extend .#{$LAYOUT}--solid;
+    @extend .#{$LAYOUT}--edges;
+}
+
 .#{$ROW}-quick {
     @extend .#{$ROW};
     @extend .#{$ROW}--bottoms;
@@ -11,7 +16,17 @@
     @extend .#{$ROW}--breaks;
 }
 
+.util-#{to_lower_case($row_identifier)}-common {
+    @extend .#{$ROW}--bottoms;
+    @extend .#{$ROW}--gutters;
+    @extend .#{$ROW}--breaks;
+}
+
 .#{$COLUMN}-quick {
     @extend .#{$COLUMN};
+    @extend .#{$COLUMN}--visible;
+}
+
+.util-#{to_lower_case($column_identifier)}-common {
     @extend .#{$COLUMN}--visible;
 }
