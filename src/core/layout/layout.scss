@@ -27,7 +27,7 @@
     //
 
     &--edges {
-        overflow: auto;
+        overflow: initial;
 
         .#{$ROW} {
             margin-left: 0rem;
@@ -38,7 +38,7 @@
     @each $label, $width in $viewport-min-widths {
         @include viewport-min($label) {
             &--#{$label}-edges {
-                overflow: auto;
+                overflow: initial;
 
                 .#{$ROW} {
                     margin-left: 0rem;
