@@ -425,10 +425,7 @@ body {
   font-size: 16px; }
 
 .Layout, .Layout-quick {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  display: block;
   overflow: hidden; }
   .Layout--solid, .Layout-quick, .util-layout-common {
     margin: 0 auto;
@@ -436,7 +433,7 @@ body {
   .Layout--fluid {
     width: 100%; }
   .Layout--edges, .Layout-quick, .util-layout-common {
-    overflow: initial; }
+    overflow: visible; }
     .Layout--edges .Layout__row, .Layout-quick .Layout__row, .util-layout-common .Layout__row, .Layout--edges .Layout__row-quick, .Layout-quick .Layout__row-quick, .util-layout-common .Layout__row-quick {
       margin-left: 0rem;
       margin-right: 0rem; }

@@ -1,9 +1,6 @@
 .#{$LAYOUT} {
-    display: flex;
-    flex-direction: column;
+    display: block;
     overflow: hidden;
-
-    @include debug(red);
 
     //
     // -------------------------------------------------------------------------
@@ -27,7 +24,7 @@
     //
 
     &--edges {
-        overflow: initial;
+        overflow: visible;
 
         .#{$ROW} {
             margin-left: 0rem;
