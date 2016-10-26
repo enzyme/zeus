@@ -15,8 +15,18 @@
     max-width: $percent;
 }
 
-@mixin debug($color) {
+@mixin debug-border($color) {
     @if $debug {
         border: 1px solid $color;
+    }
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+      @return #000000;
+    }
+
+    @else {
+      @return #FFFFFF;
     }
 }
