@@ -112,6 +112,8 @@
 
     @at-root {
         $flows: (
+            row: left,
+            row-reverse: right,
             column: top,
             column-reverse: bottom,
         );
