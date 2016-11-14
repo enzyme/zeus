@@ -44,7 +44,7 @@
     &--bottoms {
         margin-bottom: -$gutter-width;
 
-        .#{$COLUMN} {
+        > .#{$COLUMN} {
             padding-bottom: $gutter-width;
         }
     }
@@ -54,7 +54,7 @@
             &--#{$label}-bottoms {
                 margin-bottom: -$gutter-width;
 
-                .#{$COLUMN} {
+                > .#{$COLUMN} {
                     padding-bottom: $gutter-width;
                 }
             }
