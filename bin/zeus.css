@@ -533,32 +533,32 @@ body {
         padding: 0rem 1rem; } }
   .Layout__row--bottoms, .Layout__row-quick, .util-row-common {
     margin-bottom: -2rem; }
-    .Layout__row--bottoms .Layout__column, .Layout__row-quick .Layout__column, .util-row-common .Layout__column, .Layout__row--bottoms .Layout__column-quick, .Layout__row-quick .Layout__column-quick, .util-row-common .Layout__column-quick {
+    .Layout__row--bottoms > .Layout__column, .Layout__row-quick > .Layout__column, .util-row-common > .Layout__column, .Layout__row--bottoms > .Layout__column-quick, .Layout__row-quick > .Layout__column-quick, .util-row-common > .Layout__column-quick {
       padding-bottom: 2rem; }
   @media (min-width: 0px) {
     .Layout__row--xs-bottoms {
       margin-bottom: -2rem; }
-      .Layout__row--xs-bottoms .Layout__column, .Layout__row--xs-bottoms .Layout__column-quick {
+      .Layout__row--xs-bottoms > .Layout__column, .Layout__row--xs-bottoms > .Layout__column-quick {
         padding-bottom: 2rem; } }
   @media (min-width: 544px) {
     .Layout__row--sm-bottoms {
       margin-bottom: -2rem; }
-      .Layout__row--sm-bottoms .Layout__column, .Layout__row--sm-bottoms .Layout__column-quick {
+      .Layout__row--sm-bottoms > .Layout__column, .Layout__row--sm-bottoms > .Layout__column-quick {
         padding-bottom: 2rem; } }
   @media (min-width: 768px) {
     .Layout__row--md-bottoms {
       margin-bottom: -2rem; }
-      .Layout__row--md-bottoms .Layout__column, .Layout__row--md-bottoms .Layout__column-quick {
+      .Layout__row--md-bottoms > .Layout__column, .Layout__row--md-bottoms > .Layout__column-quick {
         padding-bottom: 2rem; } }
   @media (min-width: 992px) {
     .Layout__row--lg-bottoms {
       margin-bottom: -2rem; }
-      .Layout__row--lg-bottoms .Layout__column, .Layout__row--lg-bottoms .Layout__column-quick {
+      .Layout__row--lg-bottoms > .Layout__column, .Layout__row--lg-bottoms > .Layout__column-quick {
         padding-bottom: 2rem; } }
   @media (min-width: 1200px) {
     .Layout__row--xl-bottoms {
       margin-bottom: -2rem; }
-      .Layout__row--xl-bottoms .Layout__column, .Layout__row--xl-bottoms .Layout__column-quick {
+      .Layout__row--xl-bottoms > .Layout__column, .Layout__row--xl-bottoms > .Layout__column-quick {
         padding-bottom: 2rem; } }
   .Layout__row--breaks, .Layout__row-quick, .util-row-common {
     margin-bottom: 2rem; }
