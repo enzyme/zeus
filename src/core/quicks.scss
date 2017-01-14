@@ -4,7 +4,12 @@
     @extend .#{$LAYOUT}--edges;
 }
 
-.util-#{to_lower_case($layout_identifier)}-common, .#{$LAYOUT}--common {
+.util-#{to_lower_case($layout_identifier)}-common {
+    @extend .#{$LAYOUT}--solid;
+    @extend .#{$LAYOUT}--edges;
+}
+
+.#{$LAYOUT}--common {
     @extend .#{$LAYOUT}--solid;
     @extend .#{$LAYOUT}--edges;
 }
@@ -16,7 +21,13 @@
     @extend .#{$ROW}--breaks;
 }
 
-.util-#{to_lower_case($row_identifier)}-common, .#{$ROW}--common {
+.util-#{to_lower_case($row_identifier)}-common {
+    @extend .#{$ROW}--bottoms;
+    @extend .#{$ROW}--gutters;
+    @extend .#{$ROW}--breaks;
+}
+
+.#{$ROW}--common {
     @extend .#{$ROW}--bottoms;
     @extend .#{$ROW}--gutters;
     @extend .#{$ROW}--breaks;
@@ -27,6 +38,10 @@
     @extend .#{$COLUMN}--visible;
 }
 
-.util-#{to_lower_case($column_identifier)}-common, .#{$COLUMN}--common {
+.util-#{to_lower_case($column_identifier)}-common {
+    @extend .#{$COLUMN}--visible;
+}
+
+.#{$COLUMN}--common {
     @extend .#{$COLUMN}--visible;
 }
