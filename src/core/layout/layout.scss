@@ -26,7 +26,7 @@
     &--edges {
         overflow: visible;
 
-        > .#{$ROW} {
+        .#{$ROW} {
             margin-left: 0rem;
             margin-right: 0rem;
         }
@@ -37,7 +37,7 @@
             &--#{$label}-edges {
                 overflow: initial;
 
-                > .#{$ROW} {
+                .#{$ROW} {
                     margin-left: 0rem;
                     margin-right: 0rem;
                 }
