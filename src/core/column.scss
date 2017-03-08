@@ -1,0 +1,25 @@
+@mixin column-bare($size: 1, $total: 1) {
+    @include width($size, $total, 0);
+}
+
+@mixin column($size: 1, $total: 1) {
+    @include width($size, $total, $gutter-width);
+
+    $wraps_at: $total / $size;
+
+    margin-right: $gutter-width;
+
+    &:nth-child(#{$wraps_at}n+#{$wraps_at}) {
+        margin-right: 0;
+    }
+
+    &:nth-child(n+#{$wraps_at + 1}) {
+        margin-top: $gutter-width;
+    }
+}
+
+@mixin column-at($point, $size: 1, $total: 1) {
+    @include at($point) {
+        @include column($size, $total);
+    }
+}

@@ -1,0 +1,10 @@
+@import 'src/zeus';
+
+.Container {
+    @include row();
+}
+
+.Panel {
+    @include column-at(xs, 1, 2);
+    @include column-at(sm, 1, 3);
+}

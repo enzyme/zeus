@@ -1,5 +1,4 @@
-@import 'layout/index.scss';
-@import 'row/index.scss';
-@import 'column/index.scss';
-@import 'quicks.scss';
-@import 'debug.scss';
+@import 'variables';
+@import 'helpers';
+@import 'row';
+@import 'column'

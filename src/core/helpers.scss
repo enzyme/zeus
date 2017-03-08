@@ -1,0 +1,24 @@
+@mixin at($size) {
+    $min: map-get($viewport_min_widths, $size);
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin width($size, $total, $gutter) {
+    $percent: ($size / $total) * 100%;
+    $width: 0;
+    
+    @if ($gutter > 0) {
+        $width: calc(#{$percent} - (#{$gutter} - (#{$gutter} / #{$total}));
+    } @else {
+        $width: $percent;
+    }
+
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: $width;
+    width: $width;
+    max-width: $width;
+}

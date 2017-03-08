@@ -1,7 +1,16 @@
-// Set some initial sensible defaults.
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
 
-*, *:before, *::before, *:after, *::after {
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
