@@ -1,10 +1,17 @@
 @mixin column($list) {
-    $def_size: 5;
+    $def_size: 6;
     $len: length($list);
 
     @if $len == $def_size {
-        @include at(nth($list, 1)) {
-            @include column(nth($list, 2), nth($list, 3));
+        $gutters: nth($list, 1);
+        $bottoms: nth($list, 2);
+        $breakpoint: nth($list, 3);
+        $size: nth($list, 4);
+        $columns: nth($list, 5);
+        $breaks_at: nth($list, 6);
+
+        @include at($breakpoint) {
+            @include create-column($gutters, $bottoms, $size, $columns, $breaks_at);
         }
     } @else {
         $end: $len / $def_size;
@@ -15,23 +22,24 @@
             $breakpoint: nth($list, $step + 3);
             $size: nth($list, $step + 4);
             $columns: nth($list, $step + 5);
+            $breaks_at: nth($list, $step + 6);
 
             @if ($i + 1) == $end {
                 @include at($breakpoint) {
-                    @include create-column($gutters, $bottoms, $size, $columns);
+                    @include create-column($gutters, $bottoms, $size, $columns, $breaks_at);
                 }
             } @else {
-                $next_breakpoint: nth($list, $step + 8);
+                $next_breakpoint: nth($list, $step + 9);
                 @include between($breakpoint, $next_breakpoint) {
-                    @include create-column($gutters, $bottoms, $size, $columns);
+                    @include create-column($gutters, $bottoms, $size, $columns, $breaks_at);
                 }
             }
         }
     }
 }
 
-@mixin create-column($gutters: true, $bottoms: true, $size: 1, $total: 1) {
-    @include width($size, $total, $gutter-width);
+@mixin create-column($gutters: true, $bottoms: true, $size: 1, $total: 1, $breaks_at: 1) {
+    @include width($size, $total, $gutter-width, $breaks_at);
 
     $wraps_at: $total / $size;
 
