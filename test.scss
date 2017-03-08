@@ -5,6 +5,9 @@
 }
 
 .Panel {
-    @include column-at(xs, 1, 2);
-    @include column-at(sm, 1, 3);
+    @include column((
+        true, true, xs, 1, 1,
+        true, true, md, 1, 2,
+        true, true, xl, 1, 3,
+    ));
 }

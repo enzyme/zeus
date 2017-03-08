@@ -1,7 +1,16 @@
-@mixin at($size) {
-    $min: map-get($viewport_min_widths, $size);
+@mixin at($point) {
+    $min: map-get($viewport_min_widths, $point);
 
     @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin between($point_a, $point_b) {
+    $min: map-get($viewport_min_widths, $point_a);
+    $max: map-get($viewport_min_widths, $point_b) - 1px;
+
+    @media (min-width: $min) and (max-width: $max) {
         @content;
     }
 }
@@ -9,7 +18,7 @@
 @mixin width($size, $total, $gutter) {
     $percent: ($size / $total) * 100%;
     $width: 0;
-    
+
     @if ($gutter > 0) {
         $width: calc(#{$percent} - (#{$gutter} - (#{$gutter} / #{$total}));
     } @else {

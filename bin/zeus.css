@@ -17,7 +17,20 @@ body {
   display: flex;
   flex-wrap: wrap; }
 
-@media (min-width: 0px) {
+@media (min-width: 0px) and (max-width: 767px) {
+  .Panel {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(100% - (30px - (30px / 1)));
+    width: calc(100% - (30px - (30px / 1)));
+    max-width: calc(100% - (30px - (30px / 1)));
+    margin-right: 30px; }
+    .Panel:nth-child(1n+1) {
+      margin-right: 0; }
+    .Panel:nth-child(n+2) {
+      margin-top: 30px; } }
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .Panel {
     flex-shrink: 0;
     flex-grow: 0;
@@ -30,7 +43,7 @@ body {
     .Panel:nth-child(n+3) {
       margin-top: 30px; } }
 
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   .Panel {
     flex-shrink: 0;
     flex-grow: 0;

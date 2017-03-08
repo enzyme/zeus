@@ -1,25 +1,51 @@
-@mixin column-bare($size: 1, $total: 1) {
-    @include width($size, $total, 0);
+@mixin column($list) {
+    $def_size: 5;
+    $len: length($list);
+
+    @if $len == $def_size {
+        @include at(nth($list, 1)) {
+            @include column(nth($list, 2), nth($list, 3));
+        }
+    } @else {
+        $end: $len / $def_size;
+        @for $i from 0 to $end {
+            $step: $i * $def_size;
+            $gutters: nth($list, $step + 1);
+            $bottoms: nth($list, $step + 2);
+            $breakpoint: nth($list, $step + 3);
+            $size: nth($list, $step + 4);
+            $columns: nth($list, $step + 5);
+
+            @if ($i + 1) == $end {
+                @include at($breakpoint) {
+                    @include create-column($gutters, $bottoms, $size, $columns);
+                }
+            } @else {
+                $next_breakpoint: nth($list, $step + 8);
+                @include between($breakpoint, $next_breakpoint) {
+                    @include create-column($gutters, $bottoms, $size, $columns);
+                }
+            }
+        }
+    }
 }
 
-@mixin column($size: 1, $total: 1) {
+@mixin create-column($gutters: true, $bottoms: true, $size: 1, $total: 1) {
     @include width($size, $total, $gutter-width);
 
     $wraps_at: $total / $size;
 
-    margin-right: $gutter-width;
+    @if $gutters == true {
+        margin-right: $gutter-width;
 
-    &:nth-child(#{$wraps_at}n+#{$wraps_at}) {
-        margin-right: 0;
+        &:nth-child(#{$wraps_at}n+#{$wraps_at}) {
+            margin-right: 0;
+        }
     }
 
-    &:nth-child(n+#{$wraps_at + 1}) {
-        margin-top: $gutter-width;
-    }
-}
-
-@mixin column-at($point, $size: 1, $total: 1) {
-    @include at($point) {
-        @include column($size, $total);
+    @if $bottoms == true {
+        &:nth-child(n+#{$wraps_at + 1}) {
+            margin-top: $gutter-width;
+        }
     }
 }
