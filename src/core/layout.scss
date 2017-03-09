@@ -1,0 +1,13 @@
+@mixin layout() {
+    margin: 0 auto;
+    padding: 0 ($gutter_width / 2);
+    max-width: $layout_max_width + $gutter_width;
+}
+
+@mixin layout-fluid() {
+    padding: 0 ($gutter_width / 2);
+}
+
+@mixin layout-breakaway() {
+    margin-bottom: $gutter_width;
+}
