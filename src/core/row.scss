@@ -3,13 +3,13 @@
     flex-wrap: wrap;
 }
 
-@mixin row-direction($direction: 'row') {
-    flex-direction: $direction;
+@mixin row-reverse() {
+    flex-direction: row-reverse;
 }
 
-@mixin row-direction-at($point, $direction: 'row') {
+@mixin row-reverse-at($point) {
     @include at($point) {
-        @include row-direction($direction);
+        @include row-direction();
     }
 }
 
