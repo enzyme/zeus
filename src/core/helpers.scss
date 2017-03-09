@@ -15,12 +15,12 @@
     }
 }
 
-@mixin width($size, $total, $gutter) {
+@mixin width($size, $total, $gutter, $breaks_at) {
     $percent: ($size / $total) * 100%;
     $width: 0;
 
     @if ($gutter > 0) {
-        $width: calc(#{$percent} - (#{$gutter} - (#{$gutter} / #{$total}));
+        $width: calc(#{$percent} - (#{$gutter} - (#{$gutter} / #{$breaks_at}));
     } @else {
         $width: $percent;
     }
