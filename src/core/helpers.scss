@@ -15,19 +15,33 @@
     }
 }
 
-@mixin width($size, $total, $gutter, $breaks_at) {
-    $percent: ($size / $total) * 100%;
-    $width: 0;
-
-    @if ($gutter > 0) {
-        $width: calc(#{$percent} - (#{$gutter} - (#{$gutter} / #{$breaks_at}));
-    } @else {
-        $width: $percent;
-    }
+@mixin width($size, $total, $gutters, $breaks_at) {
+    $width: make-width($size, $total, $gutters, $breaks_at);
 
     flex-shrink: 0;
     flex-grow: 0;
     flex-basis: $width;
     width: $width;
     max-width: $width;
+}
+
+@function make-width($size, $total, $gutters, $breaks_at, $offset: 0) {
+    $percent: ($size / $total) * 100%;
+    $width: 0;
+
+    @if $gutters == true {
+        @if $offset > 0 {
+            $width: calc((#{$offset} * (#{$percent} - (#{$gutter_width} - (#{$gutter_width} / #{$breaks_at}))) + (#{$offset * #{$gutter_width}}));
+        } @else {
+            $width: calc(#{$percent} - (#{$gutter_width} - (#{$gutter_width} / #{$breaks_at})));
+        }
+    } @else {
+        $width: $percent;
+    }
+
+    @return $width;
+}
+
+@function create-offset($offset, $size, $total, $breaks_at) {
+    @return make-width($size, $total, $gutter_width, $breaks_at, $offset);
 }

@@ -39,7 +39,7 @@
 }
 
 @mixin create-column($gutters: true, $bottoms: true, $size: 1, $total: 1, $breaks_at: 1) {
-    @include width($size, $total, $gutter-width, $breaks_at);
+    @include width($size, $total, $gutters, $breaks_at);
 
     $wraps_at: $total / $size;
 
