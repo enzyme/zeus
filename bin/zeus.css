@@ -14,28 +14,100 @@ body {
   font-size: 16px; }
 
 .Container {
+  margin: 0 auto;
   padding: 0 15px;
+  max-width: 1230px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse; }
+  margin-bottom: 30px; }
 
 @media (min-width: 0px) {
-  .Panel--a {
+  .Panel-a {
     flex-shrink: 0;
     flex-grow: 0;
-    flex-basis: calc(66.66667% - (30px - (30px / 2)));
-    width: calc(66.66667% - (30px - (30px / 2)));
-    max-width: calc(66.66667% - (30px - (30px / 2))); } }
-
-@media (min-width: 0px) {
-  .Panel--b {
-    flex-shrink: 0;
-    flex-grow: 0;
-    flex-basis: calc(33.33333% - (30px - (30px / 2)));
-    width: calc(33.33333% - (30px - (30px / 2)));
-    max-width: calc(33.33333% - (30px - (30px / 2)));
+    flex-basis: calc(100% - (30px - (30px / 1)));
+    width: calc(100% - (30px - (30px / 1)));
+    max-width: calc(100% - (30px - (30px / 1)));
     margin-right: 30px; }
-    .Panel--b:nth-child(3n+3) {
+    .Panel-a:nth-child(1n+1) {
       margin-right: 0; }
-    .Panel--b:nth-child(n+4) {
+    .Panel-a:nth-child(n+2) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-b {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(50% - (30px - (30px / 2)));
+    width: calc(50% - (30px - (30px / 2)));
+    max-width: calc(50% - (30px - (30px / 2)));
+    margin-right: 30px; }
+    .Panel-b:nth-child(2n+2) {
+      margin-right: 0; }
+    .Panel-b:nth-child(n+3) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-c {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(25% - (30px - (30px / 4)));
+    width: calc(25% - (30px - (30px / 4)));
+    max-width: calc(25% - (30px - (30px / 4)));
+    margin-right: 30px; }
+    .Panel-c:nth-child(4n+4) {
+      margin-right: 0; }
+    .Panel-c:nth-child(n+5) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-d {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(16.66667% - (30px - (30px / 6)));
+    width: calc(16.66667% - (30px - (30px / 6)));
+    max-width: calc(16.66667% - (30px - (30px / 6)));
+    margin-right: 30px; }
+    .Panel-d:nth-child(6n+6) {
+      margin-right: 0; }
+    .Panel-d:nth-child(n+7) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-e {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(12.5% - (30px - (30px / 8)));
+    width: calc(12.5% - (30px - (30px / 8)));
+    max-width: calc(12.5% - (30px - (30px / 8)));
+    margin-right: 30px; }
+    .Panel-e:nth-child(8n+8) {
+      margin-right: 0; }
+    .Panel-e:nth-child(n+9) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-f {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(10% - (30px - (30px / 10)));
+    width: calc(10% - (30px - (30px / 10)));
+    max-width: calc(10% - (30px - (30px / 10)));
+    margin-right: 30px; }
+    .Panel-f:nth-child(10n+10) {
+      margin-right: 0; }
+    .Panel-f:nth-child(n+11) {
+      margin-top: 30px; } }
+
+@media (min-width: 0px) {
+  .Panel-g {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(8.33333% - (30px - (30px / 12)));
+    width: calc(8.33333% - (30px - (30px / 12)));
+    max-width: calc(8.33333% - (30px - (30px / 12)));
+    margin-right: 30px; }
+    .Panel-g:nth-child(12n+12) {
+      margin-right: 0; }
+    .Panel-g:nth-child(n+13) {
       margin-top: 30px; } }
