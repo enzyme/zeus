@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="bin/zeus.css">
     <style>
         body {
+            padding: 0;
+            margin: 0;
             padding-top: 5rem;
         }
 
@@ -14,27 +16,27 @@
             padding: 0;
             text-align: justify;
         }
+
+        .Panel {
+            background-color: purple;
+            height: 10rem;
+            display: block;
+        }
+
+        .Panel:nth-child(2n+2) {
+            background-color: crimson;
+            height: 10rem;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="Container">
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <div class="Panel Panel--a">
+            <!-- Some content -->
         </div>
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        </div>
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        </div>
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        </div>
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        </div>
-        <div class="Panel">
-            <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <div class="Panel Panel--b">
+            <!-- Some content -->
         </div>
     </div>
 </body>
