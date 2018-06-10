@@ -120,7 +120,7 @@
 
         @each $flow, $direction in $flows {
             .#{$ROW}--direction-#{$flow} {
-                @for $i from 1 through $column-count {
+                @for $i from 0 through $column-count {
                     .#{$COLUMN}--offset-#{$i} {
                         margin: 0;
                         margin-#{map-get($flows, $flow)}: ($i / $column-count) * 100%;
@@ -133,7 +133,7 @@
             .#{$ROW}--direction-#{$flow} {
                 @each $label, $width in $viewport-min-widths {
                     @include viewport-min($label) {
-                        @for $i from 1 through $column-count {
+                        @for $i from 0 through $column-count {
                             .#{$COLUMN}--#{$label}-offset-#{$i} {
                                 margin: 0;
                                 margin-#{map-get($flows, $flow)}: ($i / $column-count) * 100%;
