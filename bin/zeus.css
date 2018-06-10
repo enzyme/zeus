@@ -440,31 +440,31 @@ body {
   @media (min-width: 0px) {
     .Layout--xs-edges {
       overflow: initial; }
-      .Layout--xs-edges > .Layout__row, .Layout--xs-edges > .Layout__row-quick {
+      .Layout--xs-edges .Layout__row, .Layout--xs-edges .Layout__row-quick {
         margin-left: 0rem;
         margin-right: 0rem; } }
   @media (min-width: 544px) {
     .Layout--sm-edges {
       overflow: initial; }
-      .Layout--sm-edges > .Layout__row, .Layout--sm-edges > .Layout__row-quick {
+      .Layout--sm-edges .Layout__row, .Layout--sm-edges .Layout__row-quick {
         margin-left: 0rem;
         margin-right: 0rem; } }
   @media (min-width: 768px) {
     .Layout--md-edges {
       overflow: initial; }
-      .Layout--md-edges > .Layout__row, .Layout--md-edges > .Layout__row-quick {
+      .Layout--md-edges .Layout__row, .Layout--md-edges .Layout__row-quick {
         margin-left: 0rem;
         margin-right: 0rem; } }
   @media (min-width: 992px) {
     .Layout--lg-edges {
       overflow: initial; }
-      .Layout--lg-edges > .Layout__row, .Layout--lg-edges > .Layout__row-quick {
+      .Layout--lg-edges .Layout__row, .Layout--lg-edges .Layout__row-quick {
         margin-left: 0rem;
         margin-right: 0rem; } }
   @media (min-width: 1200px) {
     .Layout--xl-edges {
       overflow: initial; }
-      .Layout--xl-edges > .Layout__row, .Layout--xl-edges > .Layout__row-quick {
+      .Layout--xl-edges .Layout__row, .Layout--xl-edges .Layout__row-quick {
         margin-left: 0rem;
         margin-right: 0rem; } }
   .Layout--breakaway {
